@@ -50,10 +50,11 @@ feature2:
     you're ready you can share that content with your team or with the entire Myagi
     network.
 feature3:
-  heading: Communicate and co-ordinate
+  heading: Communicate and coordinate
   text: Sometimes you just need to get a quick message out to frontline staff. With
-    Myagi, you can deliver announcements which then become discussion threads. This
-    functionality is available to brands and team managers as well.
+    Myagi, you can deliver announcements which then become discussion threads. Keep
+    control of the messages by only allowing admins and managers to post, lest that
+    cheeky employee send out a poop emoji en masse.
 feature4:
   heading: 'BYOB: Bring your own branding'
   text: Your team deserves to feel at home, so own your space with Myagi’s rich custom
@@ -87,7 +88,7 @@ testimonial3:
     not daunting to me or our team.
   name: Richard Morrow
   jobTitle: Chief Retail Officer, Mike's Bikes
-  url: "#farts"
+  url: ''
 bottomCTAHeading: Start now, thank us later
 bottomCTAExplainer: Want to see if Myagi is right for your team?  Go ahead—Myagi is
   forever free for up to 15 stores on your account (for retailers). Need extra features
