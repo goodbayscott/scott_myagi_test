@@ -54,7 +54,7 @@ feature3:
   text: Sometimes you just need to get a quick message out to frontline staff. With
     Myagi, you can deliver announcements which then become discussion threads. Keep
     control of the messages by only allowing admins and managers to post, and decide
-    what teams get to view it.
+    what teams get to see it.
 feature4:
   heading: 'BYOB: Bring your own branding'
   text: Your team deserves to feel at home, so own your space with Myagi’s rich custom
