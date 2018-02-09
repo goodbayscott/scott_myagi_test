@@ -1,3 +1,0 @@
-# m h dom mon dow user  command
-10 1    * * *   root    /usr/local/bin/db_backup.sh daily > /var/log/db_backup.daily.log 2>&1
-*/120  * * * *   root    /usr/bin/flock -n /tmp/db_backup.lockfile /usr/local/bin/db_backup.sh regularly > /var/log/db_backup.regularly.log 2>&1

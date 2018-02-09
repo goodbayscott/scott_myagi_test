@@ -1,2 +1,0 @@
-# User rules for ubuntu
-%myagiadmins ALL=(ALL) NOPASSWD:ALL
