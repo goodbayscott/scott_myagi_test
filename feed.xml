@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-02-09T17:22:54+00:00</updated><id>/</id><title type="html">Belkirk College of Engineering</title><subtitle>Belkirk Demo Site for Forestry.io</subtitle><entry><title type="html">Welcome to the Forestry Demo Site!</title><link href="/2017-09-25-introduction/" rel="alternate" type="text/html" title="Welcome to the Forestry Demo Site!" /><published>2017-09-25T10:09:13+01:00</published><updated>2017-09-25T10:09:13+01:00</updated><id>/introduction</id><content type="html" xml:base="/2017-09-25-introduction/">&lt;p&gt;Welcome to the Belkirk College of Engineering Demo Site!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-02-09T17:23:17+00:00</updated><id>/</id><title type="html">Belkirk College of Engineering</title><subtitle>Belkirk Demo Site for Forestry.io</subtitle><entry><title type="html">Example Draft</title><link href="/2018-02-09-example-draft/" rel="alternate" type="text/html" title="Example Draft" /><published>2018-01-19T00:00:00+00:00</published><updated>2018-01-19T00:00:00+00:00</updated><id>/example-draft</id><content type="html" xml:base="/2018-02-09-example-draft/">&lt;p&gt;This is a post that has some content in it. Why is it full of content? I don’t freaking know.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-theres-content&quot;&gt;Why there’s content.&lt;/h2&gt;
+
+&lt;p&gt;I told you I don’t know, why do you ask me all the time?&lt;/p&gt;
+
+&lt;h2 id=&quot;this-is-not-a-paragraph&quot;&gt;This is not a paragraph.&lt;/h2&gt;
+
+&lt;p&gt;Right.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://i2.wp.com/blog.myagi.com/wp-content/uploads/2018/02/oprah.gif?zoom=2&amp;amp;resize=300%2C169&amp;amp;ssl=1&quot; title=&quot;This is a gif&quot;&gt;oprah.gif?zoom=2&amp;amp;resize=300%2C169&amp;amp;ssl=1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-can-i-raise-my-hand&quot;&gt;How can I raise my hand?&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Have a body&lt;/li&gt;
+  &lt;li&gt;Check yoself&lt;/li&gt;
+  &lt;li&gt;Also check that you have an arm with a hand on the end of it by pointing your head down and moving your eyeballs to where your hand should be if you had one.&lt;/li&gt;
+  &lt;li&gt;Oh good, you have one. Huzzah.&lt;/li&gt;
+  &lt;li&gt;Raise the fucking hand.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;anything-else-you-need-to-say-for-yourself&quot;&gt;Anything else you need to say for yourself?&lt;/h2&gt;
+
+&lt;p&gt;nope. go home.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I went home.  —you&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;button&gt;Click me to go home&lt;/button&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post that has some content in it. Why is it full of content? I don’t freaking know.</summary></entry><entry><title type="html">Welcome to the Forestry Demo Site!</title><link href="/2017-09-25-introduction/" rel="alternate" type="text/html" title="Welcome to the Forestry Demo Site!" /><published>2017-09-25T10:09:13+01:00</published><updated>2017-09-25T10:09:13+01:00</updated><id>/introduction</id><content type="html" xml:base="/2017-09-25-introduction/">&lt;p&gt;Welcome to the Belkirk College of Engineering Demo Site!&lt;/p&gt;
 
 &lt;p&gt;This site allows you to explore Forestry’s features and functionality, and is &lt;strong&gt;not&lt;/strong&gt; meant to be used as a production website. To get started building your own site, please see our &lt;a href=&quot;https://forestry.io/docs/&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
 
