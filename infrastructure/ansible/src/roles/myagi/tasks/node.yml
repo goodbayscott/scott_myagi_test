@@ -1,0 +1,22 @@
+---
+
+- name: install https support
+  apt: name=apt-transport-https state=latest
+
+- name: configure node apt-get repo key
+  become: yes
+  shell: curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+
+- name: add node apt-get repo
+  apt_repository: repo='deb https://deb.nodesource.com/node_6.x precise main' state=present
+
+- name: add node source apt-get repo
+  apt_repository: repo='deb-src https://deb.nodesource.com/node_6.x precise main' state=present
+
+- name: install node
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - nodejs
+
+- name: upgrade npm
+  shell: sudo npm install npm@3.5.2 -g

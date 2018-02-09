@@ -1,0 +1,1721 @@
+{
+  "learning": "Learning",
+
+  "welcome_to_myagi": "Welcome to Myagi",
+
+  "complete_your_first_plan": "Complete your first plan",
+
+  "view_post_from": "New post from %(firstName)s %(lastName)s: %(postSummary)s",
+
+  "view_post": "View post",
+
+  "view_comments": "View comments",
+
+  "view_comments_on_post": "There are new comments on \"%(postSummary)s\"",
+
+  "activity_feed_description": "This is your feed, where you will be able to see all the activity happening across your company. Start by trying a plan or writing a post. ",
+
+  "about_this_channel": "About this channel",
+
+  "accept": "Accept",
+
+  "access_code": "Access code",
+
+  "access_code_incorrect": "access_code_incorrect",
+
+  "access_code_info": "Secure your Myagi URL by setting a company access code. Users will be required to enter this code when they sign up via your Myagi URL (though not if they are invited directly into your company). If you do not have a Myagi URL, then there is no need to set an access code.",
+
+  "access_react_training": "Sign up to Myagi to access exclusive React training content and win prizes for your store",
+
+  "accessibility": "Accessibility",
+
+  "accessibility_info": "Public channels can be connected to by any company in Myagi. Basic details about channels which are 'Public but with request to access' can be seen by all companies within Myagi, but the content within them cannot be viewed unless the owner approves the connection request. Private channels are only viewable via direct invitation by the owner.",
+
+  "account_deactivated": "Account deactivated",
+
+  "account_disabled": "Account disabled",
+
+  "action_items": "Action Items",
+
+  "active": "Active",
+
+  "add": "Add",
+
+  "add_a_lesson_to_the": "Add a lesson to the",
+
+  "add_a_lesson_to_the_plan": "Add a lesson to the '%(name)s' plan",
+
+  "add_an_image": "Add an image",
+
+  "add_another_answer": "Add another alternate answer",
+
+  "add_any_url_or_webpage_here": "Add any URL or webpage here",
+
+  "add_badge": "Add badge",
+
+  "add_card": "Add Card",
+
+  "add_existing_lesson": "Add existing lesson",
+
+  "add_image": "Add Image",
+
+  "add_lesson": "Add lesson",
+
+  "add_lessons_to_plan": "Add lessons to plan",
+
+  "add_lessons_to_the": "Add lessons to the",
+
+  "add_lessons_to_the_name_plan": "Add lessons to the '%(name)s' plan",
+
+  "add_my_retailer": "Add my retailer",
+
+  "add_plans": "Add Plans",
+
+  "add_question": "Add Question",
+
+  "add_store": "Add your store",
+
+  "add_team": "Add Team",
+
+  "add_text_here": "Write a post for your company...",
+
+  "add_users": "Add Users",
+
+  "add_video": "Add Video",
+
+  "add_web_snippet": "Add Web Snippet",
+
+  "admin_enrollment_notifications": "Admin enrollment notifications",
+
+  "admin_enrollment_notifications_info": "Will take effect if any of your plans aren't reaching their potential",
+
+  "all": "All",
+
+  "all_channels": "All Channels",
+
+  "all_content": "All content",
+
+  "all_lessons": "All Lessons",
+
+  "all_plans": "All Plans",
+
+  "all_time": "All Time",
+
+  "all_user_admin_access": "All users have admin access on free plans. Myagi Pro puts the control in your hands by giving you groups, areas, and user tiers to keep your company’s training organized.",
+
+  "all_you_retail_learning_material": "All your retail learning material in one spot — no training session needed",
+
+  "allocation": "Allocation",
+
+  "allow_new_users_to_create_teams": "Allow new users to create teams",
+
+  "allow_new_users_to_create_teams_info": "If enabled, all new users will be able to create a new team via the sign up page",
+
+  "allow_signup_invitations": "Allow all users to send signup invitations",
+
+  "allow_signup_invitations_info": "If enabled, all users are permitted to invite others to join your company. If it is disabled, only admins and managers are able to invite users.",
+
+  "already_have_an_account": "Already have an account?",
+
+  "already_using_myagi": "Already using Myagi? Sign In",
+
+  "alternate_answers": "Alternate Answers",
+
+  "analytics": "Analytics",
+
+  "any_comments_or_feedback_find_an": "Any comments or feedback? Find an error in the lesson?",
+
+  "approx_num_people": "Average number of employees per store (approx)",
+
+  "approx_num_stores": "Number of stores operated by your company (approx)",
+
+  "archive": "Archive",
+
+  "archive_channel": "Archive Channel",
+
+  "archived": "Archived",
+
+  "archived_channels": "Archived Channels",
+
+  "archived_lessons": "Archived lessons",
+
+  "archived_plans": "Archived Plans",
+
+  "are_you_a_brand_or_retailer": "Are you a brand or retailer?",
+
+  "are_you_sure": "Are you sure?",
+
+  "are_you_sure_archive_channel": "Are you sure you want to archive this channel?",
+
+  "are_you_sure_archive_channel_info": "Users will lose access to all content in this channel.",
+
+  "are_you_sure_archive_connection": "Are you sure you want to delete this connection?",
+
+  "are_you_sure_archive_lesson": "Are you sure you want to archive this lesson? This will remove it from all plans it is currently associated with.",
+
+  "are_you_sure_delete_area": "Are you sure you want to delete this area?",
+
+  "are_you_sure_delete_group": "Are you sure you want to delete this group?",
+
+  "are_you_sure_delete_team": "Are you sure you want to delete this team?",
+
+  "are_you_sure_remove_area": "Are you sure you want to remove this team from the %(name)s area?",
+
+  "are_you_sure_remove_user": "Are you sure you want to remove %(removeUserName)s from your company?",
+
+  "are_you_sure_remove_user_from_group": "Are you sure you want to remove this user from the %(name)s group?",
+
+  "are_you_sure_request": "Are you sure you want to delete this request?",
+
+  "are_you_sure_you_want_to_continue": "Are you sure you want to continue?",
+
+  "channel_trial_start_warning": "Would you like to start your free trial?",
+
+  "channel_trial_start_warning_info_1": "This trial license is exclusive to you and is valid for two weeks, giving you plenty of time to evaluate the course in full- no taster sessions here!",
+
+  "channel_trial_start_warning_info_2": "If this course is what you are looking for, you can buy licenses at any time or come back and browse another course here in The Myagi Marketplace.",
+
+  "are_you_sure_you_want_to_delete": "Are you sure you want to delete this?",
+
+  "are_you_trying_to_join_this": "Are you trying to join this company?",
+
+  "area": "Area",
+
+  "area_name": "Area Name",
+
+  "area_rank_is_determined_using_average": "Area rank is determined using average training score. Average training score is the total number of questions answered correctly by members of an area divided by the number of people in that area. To improve your area's rank, get members of your area to attempt more lessons and answer more questions correctly.",
+
+  "areas": "Areas",
+
+  "attempt": "Attempt",
+
+  "attempt_questions": "Attempt Questions",
+
+  "attempts": "Attempts",
+
+  "auto_enroll": "Auto enroll",
+
+  "auto_enroll_in_plans": "Auto Enroll in Plans",
+
+  "auto_enroll_in_plans_group_info": "All users who are added to this group will be automatically enrolled in these plans. Existing members of this team will also be enrolled in these plans if they are not already.",
+
+  "auto_enroll_in_plans_info": "All users who are added to this team will be automatically enrolled in these plans. Existing members of this team will also be enrolled in these plans if they are not already.",
+
+  "auto_enroll_info": "If auto enroll is turned on, all users in your own company will be automatically enrolled in plans that are connected to this channel.",
+
+  "auto_enroll_off": "Auto enroll off",
+
+  "auto_enroll_on": "Auto enroll on",
+
+  "automatic_enrollment": "Automatic Enrollment",
+
+  "automatic_enrollment_info": "Choose 'Everyone' if you want all current and future users in your own company to automatically be enrolled in this plan. Alternatively, choose 'Custom' to select the individual teams and groups you want to have access.",
+
+  "average": "Average",
+
+  "average_learn_rating": "Average learn rating",
+
+  "average_lesson_score": "Average Lesson Score",
+
+  "average_like_rating": "Average like rating",
+
+  "average_score": "Average Score",
+
+  "back": "Back",
+
+  "back_to_channel": "Back to Channel",
+
+  "back_to_edit": "Back to Edit",
+
+  "back_to_plans": "Back to Plans",
+
+  "back_to_review": "Back to Review",
+
+  "badge": "badge",
+
+  "badge_archive_info": "This badge will be archived and will no longer be attainable by users.",
+
+  "badge_description": "Badge Description",
+
+  "badge_image": "Badge Image",
+
+  "badge_name": "Badge Name",
+
+  "badges": "Badges",
+
+  "become_an_expert_in_experiential_retail": "Become an expert in experiential retail, not a cautionary tale",
+
+  "buy_licences": "Buy licences",
+
+  "by": "by",
+
+  "cancel": "Cancel",
+
+  "cancel_request": "Cancel request",
+
+  "cant_find_your_company": "Can't find your company?",
+
+  "card_text": "Card Text",
+
+  "challenge_a_teammate": "Challenge a teammate",
+
+  "challenges": "Challenges",
+
+  "challenges_count": "Challenges (%(count)s)",
+
+  "change_credit_card": "Change Credit Card",
+
+  "change_password": "Change Password",
+
+  "changes_saved": "Changes Saved",
+
+  "channel_autoenrol_info": "All users in your company will be automatically enrolled in plans that are connected to this channel.",
+
+  "channel_currently_archived": "This channel is currently archived. Archived channels cannot be edited or shared. Would you like to restore it from the archive?",
+
+  "channel_ignored": "Channel Ignored",
+
+  "channel_no_autoenrol_info": "Users in your company will no longer be automatically enrolled in this channel. Current enrollments will not be deleted.",
+
+  "channel_notifications": "Channel Notification",
+
+  "channel_notifications_info": "Activity about new content, subscriptions and requests to access channels",
+
+  "channel_sharing": "Channel Sharing",
+
+  "channel_stats": "Channel Stats",
+
+  "channel_tags": "Channel tags",
+
+  "channel_tags_info": "Your channel will be suggested to all companys who match the tags you enter here.",
+
+  "channel_trial_creation_failed": "Trial creation failed",
+
+  "channel_trial_creation_failed_info": "You already have a trial or connection with this channel, contact support if this issue persists.",
+
+  "channels": "Channels",
+
+  "chat_to_us": "Chat to us",
+
+  "choose_company_to_join": "Please choose a company to join",
+
+  "clear_filters": "Clear Filters",
+
+  "click": "Click",
+
+  "click_here": "Click here",
+
+  "click_here_to_access_the_reward": "Click here to access reward!",
+
+  "click_here_to_add_some": "Click here to add some",
+
+  "click_on_the_tags_below_which": "Click on the tags below which are relevant to your company. Look for brands and product categories your company stocks, as well as relevant geographical regions. This will help us recommend the best content to you.",
+
+  "code": "Code",
+
+  "codes_already_distributed": "Codes that have already been distributed to users",
+
+  "comments": "Comments",
+
+  "community": "Community",
+
+  "company": "Company",
+
+  "company_access_code": "Company Access Code",
+
+  "company_auto_enroll": "Company Auto Enroll",
+
+  "company_channels": "Company Channels",
+
+  "company_connection_info": "You can distribute your channel content to other companies by creating a channel connection. When you do this, those companies who are connected to your channels will appear here. When companies request to consume your channels, those requests will also appear here so that you can approve or deny them.",
+
+  "company_connections": "Outgoing Company Connections",
+
+  "company_cover_image": "Company Cover Image",
+
+  "company_legal_name": "Company's legal trading name",
+
+  "company_legal_name_info": "This is for internal use only (can be opened up to all users if desired).",
+
+  "company_logo": "Company Logo",
+
+  "company_name": "Company Name",
+
+  "company_plans": "Company Plans",
+
+  "company_rank": "Company Rank",
+
+  "company_rank_for_month": "Rank for Month",
+
+  "company_rank_for_month_ext": "Company Rank for Past Month",
+
+  "company_website_url_optional": "Company Website URL",
+
+  "company_will_no_long_be_able_to_access_channel": "%(company)s will no longer have access to this channel.",
+
+  "company_will_no_longer_have_access_to_content": "%(company)s will no longer have access to this content",
+
+  "compete_with_other_branches": "Compete with other branches, view staff leaderboards, and reward your team’s learning with Myagi’s gamification tools.",
+
+  "competition_period": "Competition Period",
+
+  "complete": "Complete",
+
+  "complete_previous_plans": "You must complete previous plans before you can start this one.",
+
+  "complete_the_latest_plan": "Finish the latest plan from %(creator_name)s",
+
+  "complete_your_next_plan": "Complete your next plan",
+
+  "completed": "Completed",
+
+  "completed_action_items": "Completed Action Items",
+
+  "completed_all_lessons_access_more": "You've completed all available lessons! Click here to access more.",
+
+  "completed_all_lessons_ask_manager": "You've completed all available lessons! Speak to your manager or company admin to access more.",
+
+  "completed_count_lessons_from_plans": "completed %(count)s lessons from these plans",
+
+  "completed_on_date": "Completed %(date)s",
+
+  "completed_one_lesson_from_plans": "completed 1 lesson from these plans",
+
+  "completed_plans": "Completed Plans",
+
+  "completing_this_plan_contributes_to_earning": "Completing this plan contributes to earning the %(badgeName)s badge",
+
+  "confirm_password": "Confirm Password",
+  
+  "confirm_purchase": "Confirm purchase",
+
+  "confirm_purchase_info": "Nearly there! We’ll send you an email invoice for the licences you’ve requested. Upon payment, your licenses will be assigned to your account and you’ll be able to enroll your users right away.",
+
+  "congratulations_you_earned_this_badge": "Congratulations! You earned this badge by completing the plans below.",
+
+  "congratulations_you_have_completed_all_lessons": "Congratulations! You have completed all lessons in the '%(planName)s' plan.",
+
+  "connect": "Connect",
+
+  "connect_to_access": "Connect to access this content.",
+
+  "connect_to_all": "Connect to All",
+
+  "connect_to_key_partners": "Connect to key partners in your supply chain to share knowledge securely",
+
+  "connected": "Connected",
+
+  "connected_companies": "Connected Companies",
+
+  "connection_accepted": "Connection Accepted. Add channel to auto enroll?",
+
+  "connection_created": "Connection Created",
+
+  "connection_requested": "Connection Requested",
+
+  "connection_requested_if_not_exists": "Connection request created if it didn't already exist",
+
+  "connections": "Connections",
+
+  "content": "Content",
+
+  "continue": "Continue",
+
+  "continue_browsing": "Continue browsing",
+
+  "continue_to_myagi": "Continue to Myagi",
+
+  "copied": "Copied",
+
+  "copy_link": "Copy Link",
+
+  "correct": "Correct",
+
+  "correct_answer": "Correct Answer",
+
+  "cost": "Cost",
+
+  "cover_image": "Cover Image",
+
+  "cover_photo": "Cover Photo",
+
+  "create": "Create",
+
+  "create_a_document": "Create a document with text and images",
+
+  "create_a_new_challenge": "Create a new challenge",
+
+  "create_a_new_lesson": "Create new lesson",
+
+  "create_a_new_plan": "Create a New Plan",
+
+  "create_area": "Create Area",
+
+  "create_badge": "Create Badge",
+
+  "create_brief": "Create Brief",
+
+  "create_channel": "Create Channel",
+
+  "create_connections": "Create connections",
+
+  "create_connection": "Create connection",
+
+  "create_content": "No content? Why not create some:",
+
+  "create_group": "Create Group",
+
+  "create_groups_desc": "Create Groups & Areas to customize how content is delivered to your users",
+
+  "create_lesson": "Create Lesson",
+
+  "create_link": "Create link",
+
+  "create_my_company": "Create my own company",
+
+  "create_one_here": "Create one here",
+
+  "create_one_now": "Create one now",
+
+  "create_or_go_to_discover": "No content? Why not find or create some:",
+
+  "create_password": "Create Password",
+
+  "create_plan": "Create Plan",
+
+  "create_post": "Create Post",
+
+  "create_sharelink": "Create sharelink",
+
+  "create_sharelink_info": "Sharelinks are personalised links which allow you to share your content with people outside of your organisation. When people follow your link, they will immediately have access to your channels once they sign up. You can activate/deactivate these links any time.",
+
+  "create_team": "Create Team",
+
+  "created_a_lesson": "created a new lesson in the following plan",
+
+  "created_a_plan": "created a new plan",
+
+  "created_by": "Created by",
+
+  "crop_photo": "Crop Photo",
+
+  "curated": "Curated",
+
+  "current_enrollments": "Current Enrollments",
+
+  "current_enrollments_info": "Use this to see all the users who currently have access to this plan, either through automatic or manual enrollment.",
+
+  "current_password": "Current Password",
+
+  "custom": "Custom",
+
+  "daily": "Daily",
+
+  "deactivate": "Deactivate",
+
+  "deactivate_user_info": "This will mean that %(selectedUser)s can no longer log in and use Myagi.",
+
+  "delete": "Delete",
+
+  "department_manager": "Department Manager",
+
+  "description": "Description",
+
+  "details": "Details",
+
+  "did_you_mean_companies": "Did you mean one of these companies",
+
+  "didnt_feel_like_selecting_any_content": "Didn't feel like selecting any content?",
+
+  "digest_notifications": "Digest notifications",
+
+  "digest_notifications_info": "Notifications on recommended content that may interest you, to help you keep up to date",
+
+  "discard_changes": "Discard Changes",
+
+  "discard_confirm": "Are you sure you want to discard your work? Any unsaved changes will be lost.",
+
+  "discount_url": "Discount URL:",
+
+  "discover": "Discover",
+
+  "discover_content": "Discover Content",
+
+  "discuss_with_others": "Discuss with others",
+
+  "disenroll_myself": "Disenroll Myself",
+
+  "display_name": "Display name",
+
+  "display_name_info": "The display name is what other companies and users will see when they view this channel. If you do not set a display name, it will default to the channel name.",
+
+  "displayed_as": "Displayed as",
+
+  "document": "Document",
+
+  "done": "Done",
+
+  "dont_have_an_account": "Don't have an account?",
+
+  "dont_worry_you_can_select_some": "Don't worry, you can select some later, or you can create your own in a jiffy. Just click 'Create plan' from your home screen inside Myagi.",
+
+  "download_myagi_app": "Download Myagi App",
+
+  "due": "Due",
+
+  "due_from_now": "Due %(date)s",
+
+  "due_soon": "Due soon",
+
+  "edit": "Edit",
+
+  "edit_area": "Edit Area",
+
+  "edit_badge": "Edit Badge",
+
+  "edit_channel": "Edit Channel",
+
+  "edit_details": "Edit Details",
+
+  "edit_details_for_user": "Edit details for %(firstName)s",
+
+  "edit_pdf": "Edit PDF",
+
+  "edit_question": "Edit Question",
+
+  "edit_team": "Edit Team",
+
+  "edit_web_snippet": "Edit Web Snippet",
+
+  "edit_your_post": "Edit your post",
+
+  "educate_your_team": "Educate, communicate and collaborate across your entire team",
+
+  "email": "Email",
+
+  "email_address_not_found": "Email address not found",
+
+  "enroll": "Enroll",
+
+  "enroll_users": "Enroll users",
+
+  "enrolled": "ENROLLED",
+
+  "enrolled_plans": "Enrolled plans",
+
+  "enrolled_users": "Enrolled users",
+
+  "enrollment_group_rank_is_determined_using": "Enrollment group rank is determined using average training score. Average training score is the total number of questions answered correctly by members of an enrollment group divided by the number of people in that enrollment group. To improve your enrollment group's rank, get members of your enrollment group to attempt more lessons and answer more questions correctly.",
+
+  "enrollment_groups": "Enrollment Groups",
+
+  "enrollments": "Enrollments",
+
+  "enter_a_name": "Enter a name for your sharelink...",
+
+  "enter_emails_of_users": "Enter emails of users to invite separated by a comma",
+
+  "enter_unique_discount": "Enter unique discount codes separated by a comma, or one code per line",
+
+  "enter_unique_discount_info": "When a user earns a badge, the code will be issued to the user and removed from the list of unique codes. We will send you an email reminder when there are less than 10 codes remaining.",
+
+  "enter_video_link": "Enter a YouTube or Vimeo link",
+
+  "enter_your_company_website_url": "Enter your company's website URL.",
+
+  "error": "Error",
+
+  "error_creating_account": "Error creating account. Please contact support.",
+
+  "error_creating_company": "Error creating company",
+
+  "error_file_too_large": "Error: File too large, must be under 10MB",
+
+  "error_png_jpg": "Error: please select a valid png or jpg",
+
+  "estimated_time": "Estimated Time",
+
+  "everyone": "Everyone",
+
+  "existing_company": "Existing Company",
+
+  "external_channels": "External Channels",
+
+  "external_plans": "External Plans",
+
+  "extremely_likely": "Extremely likely",
+
+  "failed": "Failed",
+
+  "failed_to_create_request": "Failed to create request either because an invite already exists or you're already subscribed.",
+
+  "feed": "Feed",
+
+  "feedback_submissions": "Feedback submissions",
+
+  "filter": "Filter",
+
+  "filter_channels": "Filter Channels",
+
+  "find_and_follow_content_you_would": "Find and follow content you would like to see",
+
+  "find_content": "Find Content",
+
+  "find_content_share_content": "Find and share content with your team",
+
+  "find_more_channels": "Find more content",
+
+  "finish": "Finish",
+
+  "finish_selecting": "Finish selecting",
+
+  "first_name": "First Name",
+
+  "flip_card": "Flashcard",
+
+  "flip_card_explaination": "Add some flashcards to your lesson to teach people key concepts in a simple fashion. Place a term, concept or thing on the front side, then an explanation or definition on the back side.",
+
+  "flip_card_explaination_header": "What are flashcards?",
+
+  "forgot_your_password": "Forgot your password?",
+
+  "free": "Free",
+
+  "front": "Front",
+
+  "full_name": "Full Name",
+
+  "gamify_your_staffs_learning_experience": "Gamify your staff's learning experience",
+
+  "get_access_to_content": "No plans available. Please ask your manager or company admin to enroll you in some.",
+
+  "get_started": "Get Started",
+
+  "get_the_app": "Get the app",
+
+  "get_your_free_myagi_account": "Get your free Myagi account",
+
+  "give_feedback": "Give Feedback",
+
+  "google_slides_url_not_embeddable": "It looks the Google Slides URL you provided is not the embeddable version.",
+
+  "group_name": "Group Name",
+
+  "groups": "Groups",
+
+  "hang_tight_microdecks": "Hang tight! Editing microdecks from this screen is not yet supported.",
+
+  "has_shared_training_plan": "has shared the following training plan with you",
+
+  "has_shared_training_plans": "has shared the following training plans with you",
+
+  "head_office_staff": "Head Office Staff",
+
+  "help_center": "Help Center",
+
+  "help_us_explain_nps": "Help us by explaining your score.",
+
+  "here": "here",
+
+  "hide_analytics": "Hide Analytics",
+
+  "hide_archived": "Hide archived",
+
+  "home": "Home",
+
+  "how_can_we_improve": "How can we improve?",
+
+  "how_did_you_find_the_lesson": "How did you find the lesson?",
+
+  "how_licences_work": "How licences work",
+
+  "how_licences_work_info": "You can buy course licences singly or in bulk, and then enroll users at any time you choose. One license allows you to enroll one user.  Enrolling one user activates one license, they then have one year to complete the course.",
+
+  "how_likely_are_you_to_recommend":
+    "How likely are you to recommend this content to a colleague?",
+
+  "how_likely_are_you_to_recommend": "How likely are you to recommend this content to a colleague?",
+
+  "how_much_did_you_learn_from": "How much did you learn from this content?",
+
+  "how_much_did_you_like_this": "How much did you like this content?",
+
+  "how_useful_was_this_content": "How useful was this content?",
+
+  "how_would_you_rate_the_quality": "How would you rate the quality of this content?",
+
+  "i_already_have_an_account": "I already have an account",
+
+  "i_am_using_a_shared_computer": "I am using a shared computer",
+
+  "if_store_not_listed": "If your store is not listed, please leave this field blank or select 'Other'",
+
+  "if_you_are_having_trouble_viewing": "if you are having trouble viewing this document.",
+
+  "if_you_leave_this_page_your": "If you leave this page, your attempt will be incomplete.",
+
+  "if_you_were_invited_here_by": "If you were invited here by another company, please select the company you work for, not the company who invited you.",
+
+  "ignore": "Ignore",
+
+  "image": "Image",
+
+  "image_is_currently_uploading": "Image is currently uploading",
+
+  "image_updated": "Image updated",
+
+  "important_notifications": "Important notifications",
+
+  "important_notifications_info": "Security related issues, as well as configuration problems that will stop users consuming your content",
+
+  "inbox": "Inbox",
+
+  "incomplete": "Incomplete",
+
+  "incomplete_plans": "Incomplete plans",
+
+  "incorrect": "Incorrect",
+
+  "incorrect_password": "Incorrect password",
+
+  "input_your_store": "Please input your store",
+
+  "introductory_video": "Introductory video",
+
+  "introductory_video_info": "This should be an introductory video for others to learn more about this channel. It can be viewed by other companies and users if enabled.",
+
+  "invalid_email_or_password": "Invalid email or password",
+
+  "invitation_link_incorrect": "The invitation link you used is either invalid or expired.",
+
+  "invitation_notifications": "Invitation notifications",
+
+  "invitation_notifications_info": "Information regarding requests and approval for users to join your company",
+
+  "invite": "Invite",
+
+  "invite_companies_to_connect": "Invite Companies to Connect",
+
+  "invite_companies_to_subscribe": "Invite Companies to Subscribe",
+
+  "invite_users": "Invite Users",
+
+  "invites": "Invites",
+
+  "issue_with_this_lesson": "Was there an issue with this lesson?",
+
+  "job_title": "Job Title",
+
+  "join": "Join",
+
+  "join_this_company": "Join this company",
+
+  "joined_company": "joined %(company)s",
+
+  "just_fill_out_the_details": "Just fill out the details below, press 'Submit' and an invite link will be created.",
+
+  "keep_your_whole_team": "Keep your whole team in sync and skilled-up all in the same place",
+
+  "language": "Language",
+
+  "last_name": "Last Name",
+
+  "leaderboard": "Leaderboard",
+
+  "leaderboards": "Leaderboards",
+
+  "learn_about_embeddable": "Click here to learn on how to get your embeddable URL.",
+
+  "learn_about_this_channel": "Learn about this channel",
+
+  "learn_rating": "Learn Rating",
+
+  "learn_something_useful": "learn something useful",
+
+  "leave_thumbnail_blank": "If you leave this blank, we'll try to select a thumbnail from the content within",
+
+  "lesson": "Lesson",
+
+  "lesson_average": "Lesson average",
+
+  "lesson_does_not_belong_to_plan": "This lesson does not belong to a published plan. Head back to your plan to publish and enrol users.",
+
+  "lesson_feedback": "Lesson Feedback",
+
+  "lesson_feedback_notifications": "Lesson feedback notifications",
+
+  "lesson_feedback_notifications_info": "Recieve notifications when users leave comments on your lessons",
+
+  "lesson_score": "Lesson Score",
+
+  "lessons": "Lessons",
+
+  "lessons_must_be_added": "Lessons must be added to this plan before it can be taken",
+
+  "library": "Library",
+
+  "licences": "Licences",
+
+  "licences_purchased": "Licences purchased",
+
+  "licences_remaining": "Licences remaining",
+
+  "licences_used": "Licences used",
+
+  "licences_used_vs_licences_purchased": "Licences used vs licences purchased",
+
+  "like_rating": "Like Rating",
+
+  "limit_reached": "Limit reached",
+
+  "loading_with_dots": "Loading...",
+
+  "log_in": "Login",
+
+  "log_in_here": "Login here",
+
+  "login_to_myagi": "Login to Myagi",
+
+  "logo": "Logo",
+
+  "logout": "Logout",
+
+  "manage_enrollments": "Manage Enrollments",
+
+  "manage_lessons": "Manage Lessons",
+
+  "managers": "Managers",
+
+  "manual_enrollments": "Manual Enrollment",
+
+  "manual_enrollments_info": "Select specific users if you want to have finer grained control over who can access this plan.",
+
+  "marketplace": "Marketplace",
+
+  "maximum_file_size_is": "Maximum file size is %(size)s",
+
+  "minutes": "minutes",
+
+  "mobile_number": "Mobile Number",
+
+  "monthly": "Monthly",
+
+  "more": "More",
+
+  "more_lessons": "More lessons",
+
+  "must_add_plans_to_channel_before_creating_badge": "You must add some plans to this channel before you can create a badge for it.",
+
+  "must_be_at_least_minlength_characters": "Must be at least %(minLength)s characters long",
+
+  "must_be_no_more_than_maxlength": "Must be no more than %(maxLength)s characters long",
+
+  "my_team_plans": "Your Team Plans",
+
+  "myagi_gives_you_access_to_exclusive_content": "Myagi gives you access to exclusive training content from the brands you already carry within two mouse clicks",
+
+  "myagi_staff": "Myagi Staff",
+
+  "myagi_url_settings_info": "Users can visit your URL to sign up to Myagi and join your company. You should give out your URL to everyone who works for your company. Clear this input and click 'Save' to disable your URL.",
+
+  "myagis_learning_network": "Myagi’s learning network turns order-takers into experience-makers and equips you to sell more.",
+
+  "myagis_supplier_network": "Myagi’s Supplier Marketplace gives you instant access to exclusive training content from the brands you stock.",
+
+  "myagis_training_platform_empowers_your_team": "Myagi’s training platform empowers your team to evolve from order takers to experience makers.",
+
+  "name": "Name",
+
+  "name_az": "Name (A-Z)",
+
+  "name_your_sharelink": "Name",
+
+  "name_za": "Name (Z-A)",
+
+  "never": "Never",
+
+  "new_password": "New Password",
+
+  "new_plans": "New plans",
+
+  "new_request_from_company": "New request from %(company)s",
+
+  "newest": "Newest",
+
+  "next": "Next",
+
+  "next_for_today": "Next for Today",
+
+  "next_lesson": "Next Lesson",
+
+  "next_plan": "Next Plan",
+
+  "no": "No",
+
+  "no_action_items": "All action items are complete",
+
+  "no_activity": "No feed items to display",
+
+  "no_areas_available": "No areas are available.",
+
+  "no_available_users_matching_search": "There are no available users matching this search",
+
+  "no_badges_create_one": "There are no badges for this channel. Why not one?",
+
+  "no_badges_have_been_earned": "No badges have been earned.",
+
+  "no_changes_made": "No changes have been made",
+
+  "no_channels_available": "No channels available",
+
+  "no_comments_for_this_lesson": "No comments for this lesson",
+
+  "no_companies_match": "No companies match the search term you entered",
+
+  "no_companies_match_the_search_term": "No companies match the search term you entered",
+
+  "no_content": "No content",
+
+  "no_content_click_here_to_get": "No content? Click here to get access",
+
+  "no_content_create_some": "No content? Create some now by clicking the 'Create Plan' button above",
+
+  "no_content_manage_channels": "No content. Click here to manage your channels.",
+
+  "no_due_date": "No due date",
+
+  "no_groups_available": "No groups are available.",
+
+  "no_i_want_to_create_a": "No I want to create a new company",
+
+  "no_lessons": "No lessons",
+
+  "no_lessons_available": "No lessons available",
+
+  "no_likely_at_all": "Not likely at all",
+
+  "no_myagi_send_sharelink": "If the company you're looking for doesn't have a Myagi account, you can send them a sharelink",
+
+  "no_myagi_url": "You have no Myagi URL",
+
+  "no_outstanding_connection_requests": "There are no outstanding connection requests. Try selecting another filter.",
+
+  "no_outstanding_invitations": "There are no outstanding user invites.",
+
+  "no_plans": "No Plans",
+
+  "no_plans_available": "No plans available",
+
+  "no_plans_available_add_some": "There are no plans for this channel. Why not add some?",
+
+  "no_plans_available_connect": "There are no plans available in this channel at the moment. Connect to this channel to get updates when content is added.",
+
+  "no_plans_found": "No plans found",
+
+  "no_search_results": "Hmm... nothing matches your search",
+
+  "no_team": "No team",
+
+  "no_teams_available": "No Teams Available.",
+
+  "no_users_available": "No users available",
+
+  "no_users_matching_search": "There are no users matching this search.",
+
+  "none": "None",
+
+  "not_completed": "Not Completed",
+
+  "not_connected_to_channels": "Your company is not connected to any channels",
+
+  "not_your_logo": "Not your logo?",
+
+  "notice": "Notice",
+
+  "notifications": "Notifications",
+
+  "nps_recommend_friend": "How likely are you to recommend Myagi to a friend or co-worker?",
+
+  "nps_thankyou_why": "Thank you! Care to tell us why?",
+
+  "num_comments": "%(num) comments",
+
+  "num_questions_correct_to_pass": "%(questions)s correct",
+
+  "number_total_lesson": "%(number)s / %(total)s lesson",
+
+  "number_total_lessons": "%(number)s / %(total)s lessons",
+
+  "numbertotal_correct": "%(number)s / %(total)s correct",
+
+  "okay": "Okay",
+
+  "oldest": "Oldest",
+
+  "one_comment": "1 comment",
+
+  "oops_that_email_is_being_used": "Oops, that email is being used. Perhaps try signing in?",
+
+  "optimal_size_size": "optimal size: %(size)s",
+
+  "optional": "Optional",
+
+  "or": "OR",
+
+  "or_add_retailer": "Or add your retailer",
+
+  "or_create_company": "Or create your own company",
+
+  "order_will_be_randomized": "order will be randomized",
+
+  "passed": "Passed",
+
+  "passed_lessons": "Passed Lessons",
+
+  "password": "Password",
+
+  "password_entered_was_incorrect": "The password you entered was incorrect!",
+
+  "password_must_contain_one_uppercase_letter": "Password must contain one uppercase letter and number",
+
+  "password_reset": "Password Reset",
+
+  "past_month": "Past Month",
+
+  "past_week": "Past Week",
+
+  "pdf": "PDF",
+
+  "pending": "Pending",
+
+  "people": "People",
+
+  "performance_notification_frequency": "Performance Notification Frequency",
+
+  "performance_notifications": "Performance notifications",
+
+  "performance_notifications_info": "Notification emails with an overview of how you've performed over the past week",
+
+  "personal_message": "Personal Message",
+
+  "personalise_your_sharelink": "Personalise your sharelink",
+
+  "plan": "Plan",
+
+  "plan_channels": "Plan Channels",
+
+  "plan_details": "Plan details",
+
+  "plan_enrollment": "Plan enrollment",
+
+  "plan_lessons": "Plan Lessons",
+
+  "plan_locked": "Plan Locked",
+
+  "plans": "Plans",
+
+  "plans_from_my_channels": "Plans from my channels",
+
+  "plans_from_subscribed_channels": "Plans from subscribed channels",
+
+  "plans_without_channel": "Plans Without Channel",
+
+  "please_click": "Please click",
+
+  "please_click_here_if_you_are": "Please click here if you are having trouble viewing this document.",
+
+  "please_contact_us_if_you_dont": "Please contact us if you don't receive it in a few minutes",
+
+  "please_enter_a_valid_email_address": "Please enter a valid email address",
+
+  "please_enter_a_valid_name": "Please type a valid name for your plan",
+
+  "please_enter_a_valid_url": "Please enter a valid URL.",
+
+  "please_select_a_star_rating": "Please select a star rating for both fields",
+
+  "please_select_channel": "Please select a channel(s)",
+
+  "please_purchase_licences": "Please purchases licenses to enroll your users in this channel.",
+
+  "plus_count_more": "+ %(count)s more",
+
+  "post_explaination": "Announce information to your company by creating a post. This post will be viewable by all users within your company.",
+
+  "preview": "Preview",
+
+  "price": "Price",
+
+  "paid": "Paid",
+
+  "paid_channel_request_to_access_error": "If your channel has a price, it's privacy must either be set to public or private, not request to access",
+
+  "price_change_info": "When you update the price for your channel, changes will affect existing subscriptions when they are renewed",
+
+  "private": "Private",
+
+  "profile": "Profile",
+
+  "profile_details_saved": "Profile details saved",
+
+  "profile_photo": "Profile Photo",
+
+  "progress": "Progress",
+
+  "progress_through_lessons": "Progress Through Lessons",
+
+  "provide_private_feedback": "Provide private feedback",
+
+  "public": "Public",
+
+  "published": "Published",
+
+  "purchase": "Purchase",
+
+  "purchase_licences": "Purchase licences",
+
+  "purchase_request_submitted": "Purchase request submitted",
+
+  "purchase_request_submitted_info": "Great! We’ll get right back to you with your invoice, payment and enrollment details by email.  Thanks for choosing The Myagi Marketplace.",
+
+  "q": "Q",
+
+  "quantity": "Quantity",
+
+  "question": "Question",
+
+  "question_number_of_total": "Question %(number)s of %(total)s",
+
+  "questions_and_answers": "Questions and Answers",
+
+  "rank": "Rank",
+
+  "recommended": "Recommended",
+
+  "redemption_code_info": "This redemption code that will be given to ALL users when they earn this badge.",
+
+  "region": "Region",
+
+  "region_info": "Select the region your company operates in. This will help us recommend the right content to you.",
+
+  "reject": "Reject",
+
+  "relevance": "Relevance",
+
+  "remove": "Remove",
+
+  "remove_connection": "Remove connection",
+
+  "remove_enrollment_licence_warning": "Note: Once a user is enrolled, the licence is spent. Removing enrollments only removes access to the content",
+
+  "remove_existing_enrollments": "Remove existing enrollments",
+
+  "remove_it": "Remove it",
+
+  "remove_last_badge": "This plan has at least one badge associated with it. If you remove this plan then the badge will no longer be attainable. Are you sure you want to remove it from this channel?",
+
+  "report_an_issue": "Report an issue",
+
+  "reports": "Reports",
+
+  "request_access": "Request Access",
+
+  "request_failed": "Request Failed",
+
+  "request_from_company": "Request from %(company)s",
+
+  "request_to_access": "Request to access",
+
+  "requested": "Requested",
+
+  "requested_by_them": "Requested by them",
+
+  "requested_by_your_company": "Requested by your company",
+
+  "requests": "Requests",
+
+  "requests_for_your_content": "Requests for your content",
+
+  "require_entire_video_watched": "Require entire video to be watched",
+
+  "require_sequential_completion": "Users must complete plans in order",
+
+  "required": "Required",
+
+  "required_score": "Required Score",
+
+  "required_viewing": "Required viewing",
+
+  "requires": "Requires",
+
+  "reset": "Reset",
+
+  "restore_from_archive": "Restore from archive",
+
+  "retake": "Retake",
+
+  "retake_lesson": "Retake Lesson",
+
+  "review": "Review",
+
+  "reward_code": "Reward code",
+
+  "reward_details": "Reward Details",
+
+  "reward_url": "Reward URL",
+
+  "role": "Role",
+
+  "sales_associate": "Sales Associate",
+
+  "save": "Save",
+
+  "save_continue": "Save & continue",
+
+  "saved": "Saved",
+
+  "scroll_for_more_answers": "Scroll for more answers",
+
+  "search": "Search",
+
+  "search_and_select_retailer": "Search and select your retailer from the list above or input your retailer's name",
+
+  "search_for_tags_with_dots": "Search for tags...",
+
+  "search_retailer": "Search for your retailer",
+
+  "select_a_pdf_file": "Select a Pdf file",
+
+  "select_a_source": "Select a Source",
+
+  "select_a_team": "Select a team",
+
+  "select_a_video": "Select a Video",
+
+  "select_channel": "Select Channel",
+
+  "select_channels": "Channels",
+
+  "select_channels_accessible": "Select channels you want to make accessible",
+
+  "select_channels_explanation": "Select the channels you want to make available to these companies.",
+
+  "select_companies": "Select Companies",
+
+  "select_companies_explanation": "Select the companies you want to connect with.",
+
+  "select_companies_info": "Companies which subscribe will be able to view plans associated with this channel.",
+
+  "select_initial_channel": "Initial channel",
+
+  "select_initial_channel_info": "Select the channel that you would like to be seen first. Leave as 'Set to Default' for alphabetical ordering.",
+
+  "select_plans": "Select Plans",
+
+  "select_retailer": "Please select your retailer",
+
+  "select_role": "Select your role",
+
+  "select_users": "Select Users",
+
+  "select_which_plan": "Select which plans will contain this lesson. You can choose as many plans as you'd like.",
+
+  "select_your_company_below": "Select your company below",
+
+  "select_your_interests": "Select your interests",
+
+  "select_your_interests_info": "Click on the tags below which are relevant to your company. Look for product categories your company stocks. This will help us recommend the best content to you.",
+
+  "select_your_store": "Select your store",
+
+  "select_your_team": "Select your team",
+
+  "select_your_team_desc": "Please select your team to get the most out of Myagi",
+
+  "send": "Send",
+
+  "set_default": "Set to Default",
+
+  "settings": "Settings",
+
+  "sharelink_name_taken": "This name has been taken. Please choose another name for your sharelink.",
+
+  "sharelink_unavailable": "The sharelink you followed is no longer available or does not exist",
+
+  "sharelinks": "Sharelinks",
+
+  "sharelinks_info": "Sharelinks are customizable links which allow you to share your channel content with people outside of your organisation. People who follow your links will immediately have access to the associated channels once they sign up. You can activate and deactivate these links any time.",
+
+  "sharing": "Sharing",
+
+  "show_more": "Show More",
+
+  "showing_search_results_for": "Showing search results for",
+
+  "sign_up": "Sign Up",
+
+  "sign_up_free_below": "Sign Up Free Below",
+
+  "sign_up_to_access_it": "Sign up below to access it",
+
+  "sign_up_to_access_them": "Sign up below to access them",
+
+  "sign_up_to_join_your_companyname": "Sign up to join your %(companyName)s colleagues on Myagi",
+
+  "sign_up_to_start_viewing_training": "Sign up to start viewing training from %(companyName)s",
+
+  "sort_by": "Sort by...",
+
+  "start": "Start",
+
+  "start_trial": "Start trial",
+
+  "store_manager": "Store Manager",
+
+  "submit": "Submit",
+
+  "subscribe_for": "Subscribe for",
+
+  "subscription_paused_info": "Your subscription has been paused & your training content is temporarily hidden from all users. Please click here to schedule a meeting with an account manager.",
+
+  "success": "Success",
+
+  "successful": "Successful",
+
+  "support": "Support",
+
+  "sure_you_want_to_archive": "Are you sure you want to archive this plan? It will be hidden from all users.",
+
+  "tag_description": "Click on the tags below which are relevant to your company. Look for product categories your company stocks, as well as relevant geographical regions. This will help us recommend the best content to you.",
+
+  "tags": "Tags",
+
+  "tags_channels_info": "Your channel will be suggested to all companys who match the tags you enter here.",
+
+  "tags_settings_info": "Tags are used to identify content which will be relevant to your company, and to make sure any content you produce is recommended to the right people.",
+
+  "team": "Team",
+
+  "team_channels": "Team Channels",
+
+  "team_has_no_members": "This team has no members. Why not invite some?",
+
+  "team_name": "Team Name",
+
+  "team_plans": "Team Plans",
+
+  "team_rank": "Team Rank",
+
+  "team_rank_is_determined_using_average": "Team rank is determined using average training score. Average training score is the total number of questions answered correctly by members of a team divided by the number of people in that team. To improve your team's rank, get members of your team to attempt more lessons and answer more questions correctly.",
+
+  "teams": "Teams",
+
+  "thank_you_for_notifying_us": "Thank you for notifying us!",
+
+  "thank_you_for_your_feedback": "Thank you for your feedback!",
+
+  "the_plans_for_this_badge_are_no_longer": "The plans for this badge are no longer available",
+
+  "the_sun_shine_a_bit_brighter": "The sun shine a bit brighter today! You’ve won the Felicitation! Badges. Take a moment to reflect on your awesomeness, then check out the spoils of your win here",
+
+  "there_are_no_archived_lessons": "There are no archived lessons in this plan.",
+
+  "there_are_no_areas": "There are no areas in this company.",
+
+  "there_are_no_channel_connections": "There are no channel connections available.",
+
+  "there_are_no_groups": "There are no groups in this company.",
+
+  "there_are_no_lessons_with_plan": "There are no lessons associated with this plan.",
+
+  "there_are_no_message_threads_available": "There are no message threads available. Click here to create one.",
+
+  "there_are_no_users_in_this_company": "There are no users in this company",
+
+  "there_isnt_anything_in_this_lesson": "There isn't anything in this lesson yet. Click one of the buttons below to add some content.",
+
+  "these_plans_must_complete_earn_badge": "These plans must be completed to earn the badge.",
+
+  "this_action_cannot_be_reversed": "This action cannot be reversed.",
+
+  "this_attempt_will_be_marked_as": "This attempt will be marked as incomplete.",
+
+  "this_email_already_exists_perhaps_try": "This email already exists, perhaps try logging in?",
+
+  "this_is_where_you_can_create": "This is where you can create or consume training content",
+
+  "this_lesson_is_not_accessible": "This lesson is not accessible",
+
+  "this_plan_contributes_to_earning_the": "This plan contributes to earning the \"%(badgeName)s\" badge.",
+
+  "this_plan_has_no_lessons": "This plan has no lessons",
+
+  "tick_this_box_to_receive_updates": "Tick this box to receive updates from our blog.",
+
+  "time": "Time",
+
+  "to_access_other_content_sign_up_below": "To access other content sign up below",
+
+  "to_create_one": "to create one.",
+
+  "to_find_and_use_great_content": "to find and use content from the Myagi network.",
+
+  "to_find_and_use_other_great_content": "to find and use other content from the Myagi network.",
+
+  "to_use_apps_create_password": "To use our iOS and Android Apps, please create a password",
+
+  "today": "Today",
+
+  "todays_lessons": "Today's lessons",
+
+  "total": "Total",
+
+  "total_number_of_users": "Total number of users",
+
+  "training": "Training",
+
+  "training_manager": "Training Manager",
+
+  "training_notifications": "Training Notification",
+
+  "training_notifications_info": "Information about new training content, badges and challenges",
+
+  "transform_your_frontline_staff": "Transform your front-line staff into top-of-the-line staff",
+
+  "trial_period_started_info_1": "You now have two weeks to try out this course in full. It will appear in the “External Channels” tab in your content dashboard.",
+
+  "trial_period_started_info_2": "Remember you can buy licenses for this and all our courses at any time and share the knowledge with your team.",
+
+  "try_again": "Try Again",
+
+  "try_choosing_another_filter": "Try choosing another filter.",
+
+  "try_this_lesson": "Try this lesson",
+
+  "unable_to_archive_channel": "Unable to archive channel",
+
+  "unable_to_archive_channel_info": "Channels can only be archived once all plans have been removed.",
+
+  "unpublished": "Unpublished",
+
+  "unpublished_plans": "Unpublished plans",
+
+  "update": "Update",
+
+  "update_details": "Update Details",
+
+  "update_failed": "Update failed",
+
+  "update_password": "Update Password",
+
+  "upgrade_to_pro": "Upgrade to Pro — Manage Your Team",
+
+  "upgrade_to_pro_info": "All users have admin access on free plans. Myagi Pro puts the control in your hands by giving you groups, areas, and user tiers to keep your company’s training organized.",
+
+  "upgrade_to_pro_organise": "Upgrade to Pro — Organize your company with Groups",
+
+  "upgrade_to_pro_organise_area": "Upgrade to Pro — Organize your company with Areas",
+
+  "upload_your_video": "Upload your video",
+
+  "url_given_to_user": "The URL that will be given to users when they earn this badge.",
+
+  "user_access": "User Access",
+
+  "user_permissions_updated": "User permissions updated",
+
+  "user_rank_is_determined_using_training": "User rank is determined using training score. Training score is the number of unique questions you have answered correctly. Answer new questions correctly or re-answer old questions you got wrong to improve your training score.",
+
+  "users": "Users",
+
+  "users_can_view_discovery": "Users can view channel discovery",
+
+  "users_can_view_discovery_info": "If enabled, users can connect to external training content via the channel discovery page. If disabled, they can only take training content that is available to them.",
+
+  "users_reached": "Users Reached",
+
+  "users_will_be_enrolled": "Users will be enrolled in these plans when they sign up. Only plans which have lessons and are published can be selected.",
+
+  "value_required": "A value is required for this field.",
+
+  "video": "Video",
+
+  "view": "View",
+
+  "view_analytics": "View Analytics",
+
+  "view_archived": "View archived",
+
+  "view_comments": "View Comments",
+
+  "view_content": "View Content",
+
+  "view_count_completed_items": "View %(count)s completed items",
+
+  "view_enrollments": "View Enrollments",
+
+  "view_num_more_comments": "View %(num)s more comments",
+
+  "view_one_completed_item": "View 1 completed item",
+
+  "view_one_more_comment": "View 1 more comment",
+
+  "views": "Views",
+
+  "volume_discount": "Volume discount",
+
+  "waiting_for_company": "Waiting for %(company)s to accept",
+
+  "waiting_to_be_accepted_by_company": "Waiting to be accepted by %(company)s",
+
+  "want_to_restore_from_archive": "Would you like to restore this plan from the archive?",
+
+  "want_to_restore_lesson_from_archive": "Would you like to restore this lesson from the archive?",
+
+  "warning_badge_codes": "Warning: the following code(s) you have entered have already been distributed to a user",
+
+  "watch_video_to_continue": "Watch Video to Continue",
+
+  "we_created_a_list_of_companies": "We have curated these channels for you based on the brands you list on your company website. Connect to them to make more valuable learning available to your company.",
+
+  "we_have_copied_this_reward_to": "We have copied this reward to your clipboard.",
+
+  "we_have_sent_you_an_email": "We have sent you an email",
+
+  "we_let_company_know_channel_requested": "We've let this company know you want to connect. We'll let you know when they respond.",
+
+  "we_let_company_name_know_channel_requested": "We've let %(companyName)s know you want to connect. We'll let you know when they respond.",
+
+  "web_page": "Web page",
+
+  "web_snippet": "Web Snippet",
+
+  "weekly": "Weekly",
+
+  "welcome_to_the_marketplace": "Welcome to The Myagi Marketplace",
+
+  "welcome_to_the_marketplace_info_1": "We’ve selected the best, most up-to-date retail and skills development training from world-class experts and made them available here in Myagi.",
+
+  "welcome_to_the_marketplace_info_2": "These courses will make a difference to your company culture and performance.",
+
+  "welcome_to_the_marketplace_info_3": "As a company admin, you have the exclusive ability to try out any course for free! No taster sessions here, the whole course- so you really can try before you buy.",
+
+  "what_are_connections": "What are connections?",
+
+  "what_are_sharelinks": "What are sharelinks?",
+
+  "what_is_myagi": "What is Myagi?",
+
+  "what_youll_learn": "What you'll learn",
+
+  "with_myagi_you_can": "With Myagi, you can:",
+
+  "wooo_you_have_been_awarded_the": "Wooo! You have been awarded the",
+
+  "would_you_like_to_see_more": "Would you like to see more content on this product/topic?",
+
+  "yes": "Yes",
+
+  "yes_i_want_to_join": "Yes I want to join",
+
+  "you_are_adding_the_following_enrollments": "You are adding the following enrollments:",
+
+  "you_are_already_connected":
+    "You are already connected to this channel. You can view available content by clicking on the Content button on the top nav bar, and selecting Channels, then External Channels.",
+
+  "you_are_not_in_a_team": "You are not in a team.",
+
+  "you_are_removing_the_following_enrollments": "You are removing the following enrollments:",
+
+  "you_can_now_access_content":
+    "You can now access this content from the Plans tab under External Plans",
+
+  "you_are_already_connected": "You are already connected to this channel. You can view available content by clicking on the Content button on the top nav bar, and selecting Channels, then External Channels.",
+
+  "you_are_not_in_a_team": "You are not in a team.",
+
+  "you_can_now_access_content": "You can now access this content from the Plans tab under External Plans",
+
+  "you_can_upload_your_own_after": "You can upload your own after you login",
+
+  "you_connected_to_all_curated": "You've connected to all curated channels.",
+
+  "you_did_not_select_a_valid": "You did not select a valid image. Please select another file.",
+
+  "you_do_not_have_any_groups": "You do not have any groups",
+
+  "you_do_not_have_any_teams": "You do not have any teams",
+
+  "you_have_been_invited": "You have been invited by your company to learn online with Myagi. Follow the link below to learn how to delight your customers and stand out in your job.",
+
+  "you_have_not_earned_any_badges": "You have not earned any badges",
+
+  "you_have_requested_access": "You have requested access to this channel. Awaiting approval from %(companyName)s.",
+
+  "you_must_watch_the_entire_video": "You must watch the entire video from start to finish (without skipping ahead) before you can move forward. Please do not watch the video outside of this page or you will have to rewatch it here.",
+
+  "you_uploaded_a_new_profile_image": "You uploaded a new profile image, but your changes haven't been saved. Please click the submit button below.",
+
+  "you_will_be_logged_out": "You will automatically be logged out after 30 minutes of inactivity if you select this option.",
+
+  "you_will_no_longer_have_access_to_this_content": "You will no longer have access to this content",
+
+  "you_will_not_reverse": "You will not be able to reverse this deletion.",
+
+  "youre_all_set": "You're all set!",
+
+  "your_badges": "Your Badges",
+
+  "your_channels": "Your Company Channels",
+
+  "your_company_name": "Your company's name",
+
+  "your_company_name_info": "You can update your company name here. Any changes made will be visible to all users.",
+
+  "your_company_website_url": "Your company's website URL",
+
+  "your_companys_details": "Your company's details",
+
+  "your_details": "Your Details",
+
+  "your_groups": "Your Groups",
+
+  "your_myagi_url": "Your Myagi URL is",
+
+  "your_password_has_been_updated": "Your password has been updated!",
+
+  "your_performance": "Your Performance",
+
+  "your_personalised_sharelink": "Your personalised sharelink",
+
+  "your_plans": "Your plans",
+
+  "your_progress": "Your progress",
+
+  "your_score": "Your Score",
+
+  "your_search_did_not_match": "Your search did not match any results",
+
+  "your_search_did_not_match_any": "Your search did not match any results. Try choosing another filter.",
+
+  "your_teams": "Your Teams",
+
+  "categories": "Categories",
+
+  "with_myagi_you_can": "With Myagi, you can:",
+  
+  "this_lesson_is_not_accessible": "This lesson is not accessible",
+
+  "lesson_does_not_belong_to_plan":
+    "This lesson does not belong to a published plan. Head back to your plan to publish and enrol users.",
+
+  "next_plan": "Next Plan",
+
+  "back_to_channel": "Back to Channel",
+
+  "back_to_review": "Back to Review",
+
+  "back_to_edit": "Back to Edit",
+
+  "not_published": "Not published"
+}

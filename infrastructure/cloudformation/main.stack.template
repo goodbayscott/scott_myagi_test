@@ -1,0 +1,1633 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+
+	"Description": "Myagi stack",
+
+	"Parameters": {
+		"KeyName": {
+			"Description": "Name of an existing SSH keypair",
+			"Type": "String",
+			"Default": "infrastructure-access"
+		},
+		"OperatorEmail": {
+			"Description": "Email address to notify if there are any scaling operations",
+			"Type": "String",
+			"AllowedPattern": "([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)",
+			"ConstraintDescription": "must be a valid email address."
+		},
+
+		"BootstrapScriptsS3Addr": {
+			"Description": "S3 address of folder which contains bootstrap scripts",
+			"Type": "String",
+			"Default": "s3://myagi-infra/bootstrap"
+		},
+
+		"InfraGitRepo": {
+			"Description": "Address for repo which contains ansible config",
+			"Type": "String",
+			"Default": "git@github.com:Myagi/infrastructure.git"
+		},
+
+		"InfraGitSSHKeyS3Addr": {
+			"Description": "S3 address of private key which has access to the infrastructure Git repo",
+			"Type": "String",
+			"Default": "s3://myagi-infra/github-infra-access"
+		},
+
+		"DBName": {
+			"Description": "Database name to create",
+			"Type": "String",
+			"Default": "myagi"
+		},
+		"DBUser": {
+			"Description": "Database user",
+			"Type": "String",
+			"Default": "myagi"
+		},
+		"DBPassword": {
+			"Description": "Database password",
+			"Type": "String",
+			"Default": "HsDvf3sRG"
+		},
+		"AMI": {
+			"Description": "AMI to use for servers. Default is ubuntu-trusty-14.04 image.",
+			"Type": "String",
+			"Default": "ami-d24c5cb3"
+		},
+		"WebInstanceType": {
+			"Description": "Instance type to use for web servers",
+			"Type": "String",
+			"Default": "m1.small",
+			"AllowedValues": ["t1.micro", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "c1.medium", "c1.xlarge", "cc1.4xlarge", "cc2.8xlarge", "cg1.4xlarge", "hi1.4xlarge", "hs1.8xlarge", "t2.micro", "t2.small", "t2.medium"],
+			"ConstraintDescription": "Must be a valid EC2 instance type"
+		},
+		"WebServerGroupMinSize": {
+			"Description": "Min number of web servers",
+			"Type": "String",
+			"Default": "1",
+			"AllowedValues": ["1", "2", "3", "4", "5"],
+			"ConstraintDescription": "Must be number from 1-5"
+		},
+		"WebServerGroupMaxSize": {
+			"Description": "Max number of web servers",
+			"Type": "String",
+			"Default": "2",
+			"AllowedValues": ["1", "2", "3", "4", "5"],
+			"ConstraintDescription": "Must be number from 1-5"
+		},
+		"WorkerInstanceType": {
+			"Description": "Instance type to use for web workers",
+			"Type": "String",
+			"Default": "m1.small",
+			"AllowedValues": ["t1.micro", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "c1.medium", "c1.xlarge", "cc1.4xlarge", "cc2.8xlarge", "cg1.4xlarge", "hi1.4xlarge", "hs1.8xlarge", "t2.micro", "t2.small", "t2.medium", "t2.large"],
+			"ConstraintDescription": "Must be a valid EC2 instance type"
+		},
+		"WorkerServerGroupMinSize": {
+			"Description": "Min number of worker servers",
+			"Type": "String",
+			"Default": "1",
+			"AllowedValues": ["1", "2", "3", "4", "5"],
+			"ConstraintDescription": "Must be number from 1-5"
+		},
+		"WorkerServerGroupMaxSize": {
+			"Description": "Max number of worker servers",
+			"Type": "String",
+			"Default": "2",
+			"AllowedValues": ["1", "2", "3", "4", "5"],
+			"ConstraintDescription": "Must be number from 1-5"
+		},
+		"DBInstanceType": {
+			"Description": "Instance type to use for RDS DB server",
+			"Type": "String",
+			"Default": "db.m1.small",
+			"AllowedValues": ["none", "db.t1.micro", "db.m3.medium", "db.m3.large", "db.m3.xlarge", "db.m3.2xlarge", "db.m1.small", "db.m1.medium", "db.m3.medium", "db.m1.large", "db.t2.small", "db.m1.xlarge", "db.m2.xlarge", "db.m2.2xlarge", "db.m2.4xlarge", "db.cr1.8xl"],
+			"ConstraintDescription": "Must be a valid RDS instance type"
+		},
+		"CacheNodeType": {
+			"Description": "Cache node type for Redis server",
+			"Type": "String",
+			"Default": "cache.m1.small",
+			"AllowedValues": ["cache.t1.micro", "cache.m1.small", "cache.m1.medium", "cache.m1.large", "cache.m1.xlarge", "cache.m2.xlarge", "cache.m2.2xlarge", "cache.m2.4xlarge", "cache.m3.xlarge", "cache.m3.2xlarge", "cache.c1.xlarge", "cache.t2.micro"],
+			"ConstraintDescription": "Must be a valid Cache Node type."
+		},
+		"CronInstanceType": {
+			"Description": "Instance type to use for cron instances",
+			"Type": "String",
+			"Default": "m1.small",
+			"AllowedValues": ["none", "t1.micro", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "c1.medium", "c1.xlarge", "cc1.4xlarge", "cc2.8xlarge", "cg1.4xlarge", "hi1.4xlarge", "hs1.8xlarge", "t2.micro", "t2.small", "t2.medium"],
+			"ConstraintDescription": "Must be a valid EC2 instance type"
+		}
+	},
+
+	"Conditions": {
+    "CreateDB": {
+			"Fn::Not" : [{
+	      "Fn::Equals" : [
+	         {"Ref" : "DBInstanceType"},
+	         "none"
+	      ]
+   		}]
+		},
+		"CreateCron": {
+			"Fn::Not" : [{
+	      "Fn::Equals" : [
+	         {"Ref" : "CronInstanceType"},
+	         "none"
+	      ]
+   		}]
+		}
+  },
+
+	"Resources": {
+
+		"CFNUser": {
+			"Type": "AWS::IAM::User",
+			"Properties": {
+				"Path": "/",
+				"Policies": [{
+					"PolicyName": "root",
+					"PolicyDocument": {
+						"Statement": [{
+							"Effect": "Allow",
+							"Action": "cloudformation:DescribeStackResource",
+							"Resource": "*"
+						},
+						{
+							"Effect": "Allow",
+							"Action": "cloudformation:SignalResource",
+							"Resource": "*"
+						},
+						{
+				      "Effect": "Allow",
+				      "Action": [
+				        "s3:Get*",
+				        "s3:List*"
+				      ],
+				      "Resource": "*"
+				    }]
+					}
+				}]
+			}
+		},
+
+		"HostKeys": {
+			"Type": "AWS::IAM::AccessKey",
+			"Properties": {
+				"UserName": {
+					"Ref": "CFNUser"
+				}
+			}
+		},
+
+		"AppVPC": {
+			"Type": "AWS::EC2::VPC",
+			"Properties": {
+				"CidrBlock": "10.0.0.0/16",
+				"InstanceTenancy": "default",
+				"EnableDnsSupport": "true",
+				"EnableDnsHostnames": "true",
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Ref": "AWS::StackName"
+					}
+				}]
+			}
+		},
+
+		"PublicSubnetA": {
+			"Type": "AWS::EC2::Subnet",
+			"Properties": {
+				"CidrBlock": "10.0.0.0/22",
+				"AvailabilityZone": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::Region"
+					}, "a"]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "public-subnet-a"]]
+					}
+				}]
+			}
+		},
+
+		"PublicSubnetB": {
+			"Type": "AWS::EC2::Subnet",
+			"Properties": {
+				"CidrBlock": "10.0.8.0/22",
+				"AvailabilityZone": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::Region"
+					}, "b"]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "public-subnet-b"]]
+					}
+				}]
+			}
+		},
+
+		"PrivateSubnetA": {
+			"Type": "AWS::EC2::Subnet",
+			"Properties": {
+				"CidrBlock": "10.0.4.0/22",
+				"AvailabilityZone": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::Region"
+					}, "a"]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "private-subnet-a"]]
+					}
+				}]
+			}
+		},
+
+		"PrivateSubnetB": {
+			"Type": "AWS::EC2::Subnet",
+			"Properties": {
+				"CidrBlock": "10.0.12.0/22",
+				"AvailabilityZone": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::Region"
+					}, "b"]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "private-subnet-b"]]
+					}
+				}]
+			}
+		},
+
+		"PrivateSubnetARouteTable": {
+			"Type": "AWS::EC2::RouteTable",
+			"Properties": {
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "private-subnet-a-route"]]
+					}
+				}]
+			}
+		},
+
+		"PrivateSubnetBRouteTable": {
+			"Type": "AWS::EC2::RouteTable",
+			"Properties": {
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "private-subnet-b-route"]]
+					}
+				}]
+			}
+		},
+
+		"PublicSubnetsRouteTable": {
+			"Type": "AWS::EC2::RouteTable",
+			"Properties": {
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "public-subnets-route"]]
+					}
+				}]
+			}
+		},
+
+		"PublicSubnetARouteAssociation": {
+			"Type": "AWS::EC2::SubnetRouteTableAssociation",
+			"Properties": {
+				"RouteTableId": {
+					"Ref": "PublicSubnetsRouteTable"
+				},
+				"SubnetId": {
+					"Ref": "PublicSubnetA"
+				}
+			}
+		},
+
+		"PublicSubnetBRouteAssociation": {
+			"Type": "AWS::EC2::SubnetRouteTableAssociation",
+			"Properties": {
+				"RouteTableId": {
+					"Ref": "PublicSubnetsRouteTable"
+				},
+				"SubnetId": {
+					"Ref": "PublicSubnetB"
+				}
+			}
+		},
+
+		"PrivateSubnetARouteAssociation": {
+			"Type": "AWS::EC2::SubnetRouteTableAssociation",
+			"Properties": {
+				"RouteTableId": {
+					"Ref": "PrivateSubnetARouteTable"
+				},
+				"SubnetId": {
+					"Ref": "PrivateSubnetA"
+				}
+			}
+		},
+
+		"PrivateSubnetBRouteAssociation": {
+			"Type": "AWS::EC2::SubnetRouteTableAssociation",
+			"Properties": {
+				"RouteTableId": {
+					"Ref": "PrivateSubnetBRouteTable"
+				},
+				"SubnetId": {
+					"Ref": "PrivateSubnetB"
+				}
+			}
+		},
+
+		"DBSubnetGroup": {
+			"Type": "AWS::RDS::DBSubnetGroup",
+			"Properties": {
+				"DBSubnetGroupDescription": "Private DB Subnet Group",
+				"SubnetIds": [{
+					"Ref": "PrivateSubnetA"
+				}, {
+					"Ref": "PrivateSubnetB"
+				}]
+			}
+		},
+
+		"CacheSubnetGroup": {
+			"Type": "AWS::ElastiCache::SubnetGroup",
+			"Properties": {
+				"Description": "Private Cache Subnet Group",
+				"SubnetIds": [{
+					"Ref": "PrivateSubnetA"
+				}, {
+					"Ref": "PrivateSubnetB"
+				}]
+			}
+		},
+
+		"InternetGateway": {
+			"Type": "AWS::EC2::InternetGateway",
+			"Properties": {
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["-", [{
+							"Ref": "AWS::StackName"
+						}, "igw"]]
+					}
+				}]
+			}
+		},
+
+		"InternetGatewayAttachment": {
+			"Type": "AWS::EC2::VPCGatewayAttachment",
+			"Properties": {
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"InternetGatewayId": {
+					"Ref": "InternetGateway"
+				}
+			}
+		},
+
+		"InternetGatewayRoute": {
+			"Type": "AWS::EC2::Route",
+			"Properties": {
+				"DestinationCidrBlock": "0.0.0.0/0",
+				"RouteTableId": {
+					"Ref": "PublicSubnetsRouteTable"
+				},
+				"GatewayId": {
+					"Ref": "InternetGateway"
+				}
+			}
+		},
+
+		"PrivateSubnetARoute": {
+			"Type": "AWS::EC2::Route",
+			"Properties": {
+				"DestinationCidrBlock": "0.0.0.0/0",
+				"RouteTableId": {
+					"Ref": "PrivateSubnetARouteTable"
+				},
+				"InstanceId": {
+					"Ref": "BastionA"
+				}
+			}
+		},
+
+		"PrivateSubnetBRoute": {
+			"Type": "AWS::EC2::Route",
+			"Properties": {
+				"DestinationCidrBlock": "0.0.0.0/0",
+				"RouteTableId": {
+					"Ref": "PrivateSubnetBRouteTable"
+				},
+				"InstanceId": {
+					"Ref": "BastionB"
+				}
+			}
+		},
+
+		"NetworkACL": {
+			"Type": "AWS::EC2::NetworkAcl",
+			"Properties": {
+				"VpcId": {
+					"Ref": "AppVPC"
+				}
+			}
+		},
+
+		"OutACL": {
+			"Type": "AWS::EC2::NetworkAclEntry",
+			"Properties": {
+				"CidrBlock": "0.0.0.0/0",
+				"Egress": true,
+				"Protocol": "-1",
+				"RuleAction": "allow",
+				"RuleNumber": "100",
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				}
+			}
+		},
+
+		"InACL": {
+			"Type": "AWS::EC2::NetworkAclEntry",
+			"Properties": {
+				"CidrBlock": "0.0.0.0/0",
+				"Protocol": "-1",
+				"RuleAction": "allow",
+				"RuleNumber": "100",
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				}
+			}
+		},
+
+		"PublicSubnetAOutACLAssociation": {
+			"Type": "AWS::EC2::SubnetNetworkAclAssociation",
+			"Properties": {
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				},
+				"SubnetId": {
+					"Ref": "PublicSubnetA"
+				}
+			}
+		},
+
+		"PublicSubnetBOuutACLAssociation": {
+			"Type": "AWS::EC2::SubnetNetworkAclAssociation",
+			"Properties": {
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				},
+				"SubnetId": {
+					"Ref": "PublicSubnetB"
+				}
+			}
+		},
+
+		"PrivateSubnetAOutACLAssociation": {
+			"Type": "AWS::EC2::SubnetNetworkAclAssociation",
+			"Properties": {
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				},
+				"SubnetId": {
+					"Ref": "PrivateSubnetA"
+				}
+			}
+		},
+
+		"PrivateSubnetBOutACLAssociation": {
+			"Type": "AWS::EC2::SubnetNetworkAclAssociation",
+			"Properties": {
+				"NetworkAclId": {
+					"Ref": "NetworkACL"
+				},
+				"SubnetId": {
+					"Ref": "PrivateSubnetB"
+				}
+			}
+		},
+
+		"BastionSecurityGroup": {
+			"Type": "AWS::EC2::SecurityGroup",
+			"Properties": {
+				"GroupDescription": {
+					"Fn::Join": ["", ["security group for bastion hosts of ", {
+						"Ref": "AWS::StackName"
+					}]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"SecurityGroupIngress": [{
+					"IpProtocol": "tcp",
+					"FromPort": "22",
+					"ToPort": "22",
+					"CidrIp": "0.0.0.0/0"
+				}, {
+					"IpProtocol": "udp",
+					"FromPort": "60000",
+					"ToPort": "61000",
+					"CidrIp": "0.0.0.0/0"
+				}],
+				"SecurityGroupEgress": [{
+					"IpProtocol": "-1",
+					"CidrIp": "0.0.0.0/0"
+				}]
+			}
+		},
+
+		"WebSecurityGroup": {
+			"Type": "AWS::EC2::SecurityGroup",
+			"Properties": {
+				"GroupDescription": {
+					"Fn::Join": ["", ["security group for web hosts of ", {
+						"Ref": "AWS::StackName"
+					}]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"SecurityGroupIngress": [{
+					"IpProtocol": "tcp",
+					"FromPort": "80",
+					"ToPort": "80",
+					"CidrIp": "0.0.0.0/0"
+				}, {
+					"IpProtocol": "tcp",
+					"FromPort": "443",
+					"ToPort": "443",
+					"CidrIp": "0.0.0.0/0"
+				}],
+				"SecurityGroupEgress": [{
+					"IpProtocol": "-1",
+					"CidrIp": "0.0.0.0/0"
+				}]
+			}
+		},
+
+		"VPCSecurityGroup": {
+			"Type": "AWS::EC2::SecurityGroup",
+			"Properties": {
+				"GroupDescription": {
+					"Fn::Join": ["", ["common security group for hosts of ", {
+						"Ref": "AWS::StackName"
+					}]]
+				},
+				"VpcId": {
+					"Ref": "AppVPC"
+				},
+				"SecurityGroupEgress": [{
+					"IpProtocol": "-1",
+					"CidrIp": "0.0.0.0/0"
+				}]
+			}
+		},
+
+		"VPCSecurityGroupIngress": {
+			"Type": "AWS::EC2::SecurityGroupIngress",
+			"Properties": {
+				"IpProtocol": "-1",
+				"GroupId": {
+					"Ref": "VPCSecurityGroup"
+				},
+				"SourceSecurityGroupId": {
+					"Ref": "VPCSecurityGroup"
+				}
+			}
+		},
+
+		"BastionAIP": {
+			"Type": "AWS::EC2::EIP",
+			"Properties": {
+				"Domain": "vpc"
+			}
+		},
+
+		"BastionAIPAssociation": {
+			"Type": "AWS::EC2::EIPAssociation",
+			"Properties": {
+				"AllocationId": {
+					"Fn::GetAtt": ["BastionAIP", "AllocationId"]
+				},
+				"InstanceId": {
+					"Ref": "BastionA"
+				}
+			}
+		},
+
+		"BastionARecord": {
+			"Type": "AWS::Route53::RecordSetGroup",
+			"Properties": {
+				"HostedZoneName": "myagi.com.",
+				"RecordSets": [{
+					"Name": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "a.myagi.com."]]
+					},
+					"Type": "A",
+					"TTL": "300",
+					"ResourceRecords": [{
+						"Ref": "BastionAIP"
+					}]
+				}]
+			}
+		},
+
+		"BastionA": {
+			"Type": "AWS::EC2::Instance",
+			"DependsOn": ["InternetGatewayAttachment"],
+			"Properties": {
+				"DisableApiTermination": "FALSE",
+				"ImageId": {
+					"Ref": "AMI"
+				},
+				"InstanceType": "t2.micro",
+				"KeyName": {
+					"Ref": "KeyName"
+				},
+				"Monitoring": "false",
+				"SourceDestCheck": "false",
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "a"]]
+					}},
+					{
+						"Key": "myagi_stack",
+						"Value": {
+							"Ref": "AWS::StackName"
+						}
+					},
+					{
+						"Key": "myagi_instance_type",
+						"Value": "bastion"
+					}
+				],
+				"NetworkInterfaces": [{
+					"DeleteOnTermination": "true",
+					"Description": "Primary network interface",
+					"DeviceIndex": 0,
+					"SubnetId": {
+						"Ref": "PublicSubnetA"
+					},
+					"GroupSet": [{
+						"Ref": "VPCSecurityGroup"
+					}, {
+						"Ref": "BastionSecurityGroup"
+					}]
+				}],
+				"UserData": {
+					"Fn::Base64": {
+            "Fn::Join": ["", [
+							"#!/bin/bash", "\n",
+							"exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1", "\n",
+							"apt-get update", "\n",
+							"apt-get -y install python-pip", "\n",
+							"apt-get -y install awscli", "\n",
+							"mkdir ~/.aws/", "\n",
+							"echo $'",
+								"[default]\n",
+								"region = ", {"Ref": "AWS::Region"}, "\n",
+								"aws_access_key_id = ",{ "Ref": "HostKeys" },"\n",
+								"aws_secret_access_key = ",{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] },
+							"' > ~/.aws/config", "\n",
+							"cd /home/ubuntu", "\n",
+							"aws s3 cp --recursive ", {"Ref": "BootstrapScriptsS3Addr"} , " bootstrap", "\n",
+							"chmod +x bootstrap/*.sh", "\n",
+							"cd bootstrap", "\n",
+
+							"./setup-bastion.sh ",
+								{"Ref": "AWS::StackName"}, " ",
+								{"Ref": "AWS::Region"}, " ",
+								"a", " ",
+								{"Ref": "InfraGitSSHKeyS3Addr"}, " ",
+								{"Ref": "InfraGitRepo"}, " "
+						]]
+					}
+				}
+			}
+		},
+
+		"BastionBIP": {
+			"Type": "AWS::EC2::EIP",
+			"Properties": {
+				"Domain": "vpc"
+			}
+		},
+
+		"BastionBIPAssociation": {
+			"Type": "AWS::EC2::EIPAssociation",
+			"Properties": {
+				"AllocationId": {
+					"Fn::GetAtt": ["BastionBIP", "AllocationId"]
+				},
+				"InstanceId": {
+					"Ref": "BastionB"
+				}
+			}
+		},
+
+		"BastionBRecord": {
+			"Type": "AWS::Route53::RecordSetGroup",
+			"Properties": {
+				"HostedZoneName": "myagi.com.",
+				"RecordSets": [{
+					"Name": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "b.myagi.com."]]
+					},
+					"Type": "A",
+					"TTL": "300",
+					"ResourceRecords": [{
+						"Ref": "BastionBIP"
+					}]
+				}]
+			}
+		},
+
+		"BastionB": {
+			"Type": "AWS::EC2::Instance",
+			"DependsOn": ["InternetGatewayAttachment"],
+			"Properties": {
+				"DisableApiTermination": "FALSE",
+				"ImageId": {
+					"Ref": "AMI"
+				},
+				"InstanceType": "t2.micro",
+				"KeyName": {
+					"Ref": "KeyName"
+				},
+				"Monitoring": "false",
+				"SourceDestCheck": "false",
+				"Tags": [{
+					"Key": "Name",
+					"Value": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "b"]]
+					}},
+					{
+						"Key": "myagi_stack",
+						"Value": {
+							"Ref": "AWS::StackName"
+						}
+					},
+					{
+						"Key": "myagi_instance_type",
+						"Value": "bastion"
+					}
+				],
+				"NetworkInterfaces": [{
+					"DeleteOnTermination": "true",
+					"Description": "Primary network interface",
+					"DeviceIndex": 0,
+					"SubnetId": {
+						"Ref": "PublicSubnetB"
+					},
+					"GroupSet": [{
+						"Ref": "VPCSecurityGroup"
+					}, {
+						"Ref": "BastionSecurityGroup"
+					}]
+				}],
+				"UserData": {
+					"Fn::Base64": {
+            "Fn::Join": ["", [
+							"#!/bin/bash", "\n",
+							"exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1", "\n",
+							"apt-get update", "\n",
+							"apt-get -y install python-pip", "\n",
+							"apt-get -y install awscli", "\n",
+							"mkdir ~/.aws/", "\n",
+							"echo $'",
+								"[default]\n",
+								"region = ", {"Ref": "AWS::Region"}, "\n",
+								"aws_access_key_id = ",{ "Ref": "HostKeys" },"\n",
+								"aws_secret_access_key = ",{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] },
+							"' > ~/.aws/config", "\n",
+							"cd /home/ubuntu", "\n",
+							"aws s3 cp --recursive ", {"Ref": "BootstrapScriptsS3Addr"} , " bootstrap", "\n",
+							"chmod +x bootstrap/*.sh", "\n",
+							"cd bootstrap", "\n",
+
+							"./setup-bastion.sh ",
+								{"Ref": "AWS::StackName"}, " ",
+								{"Ref": "AWS::Region"}, " ",
+								"b", " ",
+								{"Ref": "InfraGitSSHKeyS3Addr"}, " ",
+								{"Ref": "InfraGitRepo"}, " "
+						]]
+					}
+				}
+			}
+		},
+
+		"CacheInstance": {
+			"Type": "AWS::ElastiCache::CacheCluster",
+			"DependsOn": "BastionA",
+			"Properties": {
+				"AutoMinorVersionUpgrade": "true",
+				"CacheNodeType": {
+					"Ref": "CacheNodeType"
+				},
+				"ClusterName": {
+					"Ref": "AWS::StackName"
+				},
+				"Engine": "redis",
+				"EngineVersion": "2.8.6",
+				"NumCacheNodes": "1",
+				"Port": "6379",
+				"PreferredAvailabilityZone": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::Region"
+					}, "a"]]
+				},
+				"PreferredMaintenanceWindow": "tue:18:00-tue:19:00",
+				"VpcSecurityGroupIds": [{
+					"Fn::GetAtt": ["VPCSecurityGroup", "GroupId"]
+				}],
+				"CacheSubnetGroupName": {
+					"Ref": "CacheSubnetGroup"
+				}
+			}
+		},
+
+		"DBInstance": {
+			"Type": "AWS::RDS::DBInstance",
+			"Condition": "CreateDB",
+			"Properties": {
+				"AutoMinorVersionUpgrade": "true",
+				"DBInstanceClass": {
+					"Ref": "DBInstanceType"
+				},
+				"DBInstanceIdentifier": {
+					"Ref": "AWS::StackName"
+				},
+				"Port": "5432",
+				"AllocatedStorage": "10",
+				"BackupRetentionPeriod": "7",
+				"DBName": {
+					"Ref": "DBName"
+				},
+				"Engine": "postgres",
+				"LicenseModel": "postgresql-license",
+				"MasterUsername": {
+					"Ref": "DBUser"
+				},
+				"MasterUserPassword": {
+					"Ref": "DBPassword"
+				},
+				"PreferredBackupWindow": "17:00-18:00",
+				"PreferredMaintenanceWindow": "tue:18:00-tue:19:00",
+				"MultiAZ": "true",
+				"VPCSecurityGroups": [{
+					"Ref": "VPCSecurityGroup"
+				}],
+				"DBSubnetGroupName": {
+					"Ref": "DBSubnetGroup"
+				},
+				"Tags": [{
+					"Key": "workload-type",
+					"Value": "production"
+				}]
+			}
+		},
+
+		"NotificationTopic": {
+			"Type": "AWS::SNS::Topic",
+			"Properties": {
+				"Subscription": [{
+					"Endpoint": {
+						"Ref": "OperatorEmail"
+					},
+					"Protocol": "email"
+				}],
+				"DisplayName": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::StackName"
+					}, "-infrastructure-notification-topic"]]
+				},
+				"TopicName": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::StackName"
+					}, "-infrastructure-notification-topic"]]
+				}
+			}
+		},
+
+		"WebLaunchConfig": {
+			"Type": "AWS::AutoScaling::LaunchConfiguration",
+			"Metadata": {
+				"AWS::CloudFormation::Init": {
+					"config": {
+						"packages": {}
+					}
+				}
+			},
+			"Properties": {
+				"KeyName": {
+					"Ref": "KeyName"
+				},
+				"ImageId": {
+					"Ref": "AMI"
+				},
+				"InstanceType": {
+					"Ref": "WebInstanceType"
+				},
+				"SecurityGroups": [{
+					"Ref": "VPCSecurityGroup"
+				}, {
+					"Ref": "WebSecurityGroup"
+				}],
+				"UserData": {
+					"Fn::Base64": {
+						"Fn::Join": ["", [
+							"#!/bin/bash", "\n",
+							"exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1", "\n",
+							"apt-get update", "\n",
+							"apt-get -y install python-pip", "\n",
+							"apt-get -y install awscli", "\n",
+							"mkdir ~/.aws/", "\n",
+							"echo $'",
+								"[default]\n",
+								"region = ", {"Ref": "AWS::Region"}, "\n",
+								"aws_access_key_id = ",{ "Ref": "HostKeys" },"\n",
+								"aws_secret_access_key = ",{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] },
+							"' > ~/.aws/config", "\n",
+							"cd /home/ubuntu", "\n",
+							"aws s3 cp --recursive ", {"Ref": "BootstrapScriptsS3Addr"} , " bootstrap", "\n",
+							"chmod +x bootstrap/*.sh", "\n",
+							"cd bootstrap", "\n",
+
+							"./setup-auto-scaling-server.sh ",
+								{"Ref": "AWS::StackName"}, " ",
+								{"Ref": "AWS::Region"}, " ",
+								"a", " ",
+								{"Ref": "InfraGitSSHKeyS3Addr"}, " ",
+								{"Ref": "InfraGitRepo"}, " ",
+								"WebLaunchConfig", " ",
+								"WebServerGroup", " ",
+								{ "Ref": "HostKeys" }, " ",
+								{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] }, "\n"
+						]]
+					}
+				}
+			}
+		},
+
+		"WebServerGroup": {
+			"Type": "AWS::AutoScaling::AutoScalingGroup",
+			"DependsOn": ["BastionA"],
+			"Properties": {
+				"VPCZoneIdentifier": [
+
+					{
+						"Ref": "PrivateSubnetA"
+					}, {
+						"Ref": "PrivateSubnetB"
+					}
+				],
+				"MetricsCollection": [{
+					"Granularity": "1Minute"
+				}],
+				"LaunchConfigurationName": {
+					"Ref": "WebLaunchConfig"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"PropagateAtLaunch": true,
+					"Value": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-web"]]
+					}
+				},
+				{
+					"Key": "myagi_instance_type",
+					"PropagateAtLaunch": true,
+					"Value": "web"
+				},
+				{
+					"Key": "myagi_stack",
+					"PropagateAtLaunch": true,
+					"Value": {
+						"Ref": "AWS::StackName"
+					}
+				}],
+				"MinSize": {
+					"Ref": "WebServerGroupMinSize"
+				},
+				"MaxSize": {
+					"Ref": "WebServerGroupMaxSize"
+				},
+				"LoadBalancerNames": [{
+					"Ref": "LoadBalancer"
+				}],
+				"NotificationConfiguration": {
+					"TopicARN": {
+						"Ref": "NotificationTopic"
+					},
+					"NotificationTypes": ["autoscaling:EC2_INSTANCE_LAUNCH",
+						"autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+						"autoscaling:EC2_INSTANCE_TERMINATE",
+						"autoscaling:EC2_INSTANCE_TERMINATE_ERROR"
+					]
+				}
+			},
+			"CreationPolicy": {
+				"ResourceSignal": {
+					"Timeout": "PT30M",
+					"Count": "1"
+				}
+			},
+			"UpdatePolicy": {
+				"AutoScalingRollingUpdate": {
+					"MinInstancesInService": "1",
+					"MaxBatchSize": "1",
+					"PauseTime": "PT30M",
+					"WaitOnResourceSignals": "true"
+				}
+			}
+		},
+
+		"WebServerScaleUpPolicy": {
+			"Type": "AWS::AutoScaling::ScalingPolicy",
+			"Properties": {
+				"AdjustmentType": "ChangeInCapacity",
+				"AutoScalingGroupName": {
+					"Ref": "WebServerGroup"
+				},
+				"Cooldown": "60",
+				"ScalingAdjustment": "1"
+			}
+		},
+		"WebServerScaleDownPolicy": {
+			"Type": "AWS::AutoScaling::ScalingPolicy",
+			"Properties": {
+				"AdjustmentType": "ChangeInCapacity",
+				"AutoScalingGroupName": {
+					"Ref": "WebServerGroup"
+				},
+				"Cooldown": "60",
+				"ScalingAdjustment": "-1"
+			}
+		},
+
+		"WebCPUAlarmHigh": {
+			"Type": "AWS::CloudWatch::Alarm",
+			"Properties": {
+				"AlarmDescription": "Scale-up if CPU > 90% for 10 minutes",
+				"MetricName": "CPUUtilization",
+				"Namespace": "AWS/EC2",
+				"Statistic": "Average",
+				"Period": "300",
+				"EvaluationPeriods": "2",
+				"Threshold": "90",
+				"AlarmActions": [{
+					"Ref": "WebServerScaleUpPolicy"
+				}],
+				"Dimensions": [{
+					"Name": "AutoScalingGroupName",
+					"Value": {
+						"Ref": "WebServerGroup"
+					}
+				}],
+				"ComparisonOperator": "GreaterThanThreshold"
+			}
+		},
+		"WebCPUAlarmLow": {
+			"Type": "AWS::CloudWatch::Alarm",
+			"Properties": {
+				"AlarmDescription": "Scale-down if CPU < 70% for 10 minutes",
+				"MetricName": "CPUUtilization",
+				"Namespace": "AWS/EC2",
+				"Statistic": "Average",
+				"Period": "300",
+				"EvaluationPeriods": "2",
+				"Threshold": "70",
+				"AlarmActions": [{
+					"Ref": "WebServerScaleDownPolicy"
+				}],
+				"Dimensions": [{
+					"Name": "AutoScalingGroupName",
+					"Value": {
+						"Ref": "WebServerGroup"
+					}
+				}],
+				"ComparisonOperator": "LessThanThreshold"
+			}
+		},
+
+		"LoadBalancer": {
+			"Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+			"Properties": {
+				"LoadBalancerName": {
+					"Fn::Join": ["", [{
+						"Ref": "AWS::StackName"
+					}, "-elb"]]
+				},
+				"Subnets": [{
+					"Ref": "PublicSubnetA"
+				}, {
+					"Ref": "PublicSubnetB"
+				}],
+				"HealthCheck": {
+					"HealthyThreshold": "10",
+					"Interval": "10",
+					"Target": "HTTP:80/healthcheck/",
+					"Timeout": "5",
+					"UnhealthyThreshold": "3"
+				},
+				"SecurityGroups": [{
+					"Ref": "VPCSecurityGroup"
+				}, {
+					"Ref": "WebSecurityGroup"
+				}],
+				"Policies": [{
+					"PolicyName": {
+						"Fn::Join": ["", ["sslnegotiationpolicy-", {
+							"Ref": "AWS::StackName"
+						}]]
+					},
+					"PolicyType": "SSLNegotiationPolicyType",
+					"Attributes": [{
+						"Name": "Protocol-SSLv3",
+						"Value": "true"
+					}, {
+						"Name": "Protocol-TLSv1",
+						"Value": "true"
+					}, {
+						"Name": "Protocol-TLSv1.1",
+						"Value": "true"
+					}, {
+						"Name": "Protocol-TLSv1.2",
+						"Value": "true"
+					}, {
+						"Name": "AES128-SHA",
+						"Value": "true"
+					}, {
+						"Name": "AES256-SHA",
+						"Value": "true"
+					}, {
+						"Name": "DES-CBC3-SHA",
+						"Value": "true"
+					}, {
+						"Name": "RC4-MD5",
+						"Value": "true"
+					}, {
+						"Name": "RC4-SHA",
+						"Value": "true"
+					}]
+				}],
+				"Listeners": [{
+					"InstancePort": "80",
+					"LoadBalancerPort": "443",
+					"Protocol": "HTTPS",
+					"InstanceProtocol": "HTTP",
+					"SSLCertificateId": "arn:aws:iam::265943325547:server-certificate/myagi_ssl",
+					"PolicyNames": [{
+						"Fn::Join": ["", ["sslnegotiationpolicy-", {
+							"Ref": "AWS::StackName"
+						}]]
+					}]
+				}, {
+					"InstancePort": "80",
+					"LoadBalancerPort": "80",
+					"Protocol": "HTTP",
+					"InstanceProtocol": "HTTP"
+				}]
+			}
+		},
+
+		"LoadBalancerDNS": {
+			"Type": "AWS::Route53::RecordSetGroup",
+			"Properties": {
+				"HostedZoneName": "myagi.com.",
+				"RecordSets": [{
+					"Name": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-web.myagi.com."]]
+					},
+					"Type": "CNAME",
+					"TTL": "300",
+					"ResourceRecords": [{
+						"Fn::GetAtt": ["LoadBalancer", "DNSName"]
+					}]
+				}]
+			}
+		},
+
+		"LoadBalancerUnhealthyHostsAlarm": {
+			"Type": "AWS::CloudWatch::Alarm",
+			"Properties": {
+				"AlarmDescription": "Warn if there are unhealthy hosts",
+				"MetricName": "UnHealthyHostCount",
+				"Namespace": "AWS/ELB",
+				"Statistic": "Average",
+				"Period": "300",
+				"EvaluationPeriods": "2",
+				"Threshold": "0",
+				"ComparisonOperator": "GreaterThanThreshold",
+				"AlarmActions": [{ "Ref" : "NotificationTopic" }],
+				"Dimensions": [{
+					"Name": "LoadBalancerName",
+					"Value": {
+						"Ref": "LoadBalancer"
+					}
+				}]
+			}
+		},
+
+		"WorkerLaunchConfig": {
+			"Type": "AWS::AutoScaling::LaunchConfiguration",
+			"Metadata": {
+				"AWS::CloudFormation::Init": {
+					"config": {
+						"packages": {}
+					}
+				}
+			},
+			"Properties": {
+				"KeyName": {
+					"Ref": "KeyName"
+				},
+				"ImageId": {
+					"Ref": "AMI"
+				},
+				"InstanceType": {
+					"Ref": "WorkerInstanceType"
+				},
+				"SecurityGroups": [{
+					"Ref": "VPCSecurityGroup"
+				}, {
+					"Ref": "WebSecurityGroup"
+				}],
+
+				"UserData": {
+					"Fn::Base64": {
+						"Fn::Join": ["", [
+							"#!/bin/bash", "\n",
+							"exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1", "\n",
+							"apt-get update", "\n",
+							"apt-get -y install python-pip", "\n",
+							"apt-get -y install awscli", "\n",
+							"mkdir ~/.aws/", "\n",
+							"echo $'",
+								"[default]\n",
+								"region = ", {"Ref": "AWS::Region"}, "\n",
+								"aws_access_key_id = ",{ "Ref": "HostKeys" },"\n",
+								"aws_secret_access_key = ",{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] },
+							"' > ~/.aws/config", "\n",
+							"cd /home/ubuntu", "\n",
+							"aws s3 cp --recursive ", {"Ref": "BootstrapScriptsS3Addr"} , " bootstrap", "\n",
+							"chmod +x bootstrap/*.sh", "\n",
+							"cd bootstrap", "\n",
+
+							"./setup-auto-scaling-server.sh ",
+								{"Ref": "AWS::StackName"}, " ",
+								{"Ref": "AWS::Region"}, " ",
+								"a", " ",
+								{"Ref": "InfraGitSSHKeyS3Addr"}, " ",
+								{"Ref": "InfraGitRepo"}, " ",
+								"WorkerLaunchConfig", " ",
+								"WorkerServerGroup", " ",
+								{ "Ref": "HostKeys" }, " ",
+								{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] }, "\n"
+						]]
+					}
+				}
+			}
+		},
+
+		"WorkerServerGroup": {
+			"Type": "AWS::AutoScaling::AutoScalingGroup",
+			"DependsOn": ["BastionA"],
+			"Properties": {
+				"VPCZoneIdentifier": [{
+					"Ref": "PrivateSubnetA"
+				}, {
+					"Ref": "PrivateSubnetB"
+				}],
+				"MetricsCollection": [{
+					"Granularity": "1Minute"
+				}],
+				"LaunchConfigurationName": {
+					"Ref": "WorkerLaunchConfig"
+				},
+				"Tags": [{
+					"Key": "Name",
+					"PropagateAtLaunch": true,
+					"Value": {
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-worker"]]
+					}
+				},
+				{
+					"Key": "myagi_instance_type",
+					"PropagateAtLaunch": true,
+					"Value": "worker"
+				},
+				{
+					"Key": "myagi_stack",
+					"PropagateAtLaunch": true,
+					"Value": {
+						"Ref": "AWS::StackName"
+					}
+				}],
+				"MinSize": {
+					"Ref": "WorkerServerGroupMinSize"
+				},
+				"MaxSize": {
+					"Ref": "WorkerServerGroupMaxSize"
+				},
+				"NotificationConfiguration": {
+					"TopicARN": {
+						"Ref": "NotificationTopic"
+					},
+					"NotificationTypes": ["autoscaling:EC2_INSTANCE_LAUNCH",
+						"autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+						"autoscaling:EC2_INSTANCE_TERMINATE",
+						"autoscaling:EC2_INSTANCE_TERMINATE_ERROR"
+					]
+				}
+			},
+			"CreationPolicy": {
+				"ResourceSignal": {
+					"Timeout": "PT30M",
+					"Count": "1"
+				}
+			},
+			"UpdatePolicy": {
+				"AutoScalingRollingUpdate": {
+					"MinInstancesInService": "1",
+					"MaxBatchSize": "1",
+					"PauseTime": "PT30M",
+					"WaitOnResourceSignals": "true"
+				}
+			}
+		},
+
+		"WorkerServerScaleUpPolicy": {
+			"Type": "AWS::AutoScaling::ScalingPolicy",
+			"Properties": {
+				"AdjustmentType": "ChangeInCapacity",
+				"AutoScalingGroupName": {
+					"Ref": "WorkerServerGroup"
+				},
+				"Cooldown": "60",
+				"ScalingAdjustment": "1"
+			}
+		},
+		"WorkerServerScaleDownPolicy": {
+			"Type": "AWS::AutoScaling::ScalingPolicy",
+			"Properties": {
+				"AdjustmentType": "ChangeInCapacity",
+				"AutoScalingGroupName": {
+					"Ref": "WorkerServerGroup"
+				},
+				"Cooldown": "60",
+				"ScalingAdjustment": "-1"
+			}
+		},
+
+		"WorkerCPUAlarmHigh": {
+			"Type": "AWS::CloudWatch::Alarm",
+			"Properties": {
+				"AlarmDescription": "Scale-up if CPU > 90% for 10 minutes",
+				"MetricName": "CPUUtilization",
+				"Namespace": "AWS/EC2",
+				"Statistic": "Average",
+				"Period": "300",
+				"EvaluationPeriods": "2",
+				"Threshold": "90",
+				"AlarmActions": [{
+					"Ref": "WorkerServerScaleUpPolicy"
+				}],
+				"Dimensions": [{
+					"Name": "AutoScalingGroupName",
+					"Value": {
+						"Ref": "WorkerServerGroup"
+					}
+				}],
+				"ComparisonOperator": "GreaterThanThreshold"
+			}
+		},
+		"WorkerCPUAlarmLow": {
+			"Type": "AWS::CloudWatch::Alarm",
+			"Properties": {
+				"AlarmDescription": "Scale-down if CPU < 70% for 10 minutes",
+				"MetricName": "CPUUtilization",
+				"Namespace": "AWS/EC2",
+				"Statistic": "Average",
+				"Period": "300",
+				"EvaluationPeriods": "2",
+				"Threshold": "70",
+				"AlarmActions": [{
+					"Ref": "WorkerServerScaleDownPolicy"
+				}],
+				"Dimensions": [{
+					"Name": "AutoScalingGroupName",
+					"Value": {
+						"Ref": "WorkerServerGroup"
+					}
+				}],
+				"ComparisonOperator": "LessThanThreshold"
+			}
+		},
+		"CronServerInstance" : {
+      "Type" : "AWS::EC2::Instance",
+			"Condition": "CreateCron",
+      "Properties" : {
+        "ImageId" : {
+					"Ref": "AMI"
+				},
+        "SecurityGroupIds" : [{ "Ref" : "VPCSecurityGroup" }],
+        "SubnetId" : { "Ref" : "PrivateSubnetA" },
+        "InstanceType" : { "Ref" : "CronInstanceType" },
+        "KeyName" : { "Ref" : "KeyName" },
+        "Tags": [{
+					"Key": "Name",
+					"Value": {
+							"Fn::Join": ["", [{
+								"Ref": "AWS::StackName"
+							}, "-cron"]]
+						}
+					},
+					{
+						"Key": "myagi_instance_type",
+						"Value": "cron"
+					},
+					{
+						"Key": "myagi_stack",
+						"Value": {
+							"Ref": "AWS::StackName"
+						}
+					},
+					{
+						"Key" : "Application",
+						"Value" : { "Ref" : "AWS::StackId"}
+					}
+				],
+        "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
+					"#!/bin/bash", "\n",
+					"exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1", "\n",
+					"apt-get update", "\n",
+					"apt-get -y install python-pip", "\n",
+					"apt-get -y install awscli", "\n",
+					"mkdir ~/.aws/", "\n",
+					"echo $'",
+						"[default]\n",
+						"region = ", {"Ref": "AWS::Region"}, "\n",
+						"aws_access_key_id = ",{ "Ref": "HostKeys" },"\n",
+						"aws_secret_access_key = ",{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] },
+					"' > ~/.aws/config", "\n",
+					"cd /home/ubuntu", "\n",
+					"aws s3 cp --recursive ", {"Ref": "BootstrapScriptsS3Addr"} , " bootstrap", "\n",
+					"chmod +x bootstrap/*.sh", "\n",
+					"cd bootstrap", "\n",
+
+					"./setup-auto-scaling-server.sh ",
+						{"Ref": "AWS::StackName"}, " ",
+						{"Ref": "AWS::Region"}, " ",
+						"a", " ",
+						{"Ref": "InfraGitSSHKeyS3Addr"}, " ",
+						{"Ref": "InfraGitRepo"}, " ",
+						"CronServerInstance", " ",
+						"CronServerInstance", " ",
+						{ "Ref": "HostKeys" }, " ",
+						{ "Fn::GetAtt": ["HostKeys", "SecretAccessKey"] }, "\n"
+        ]]}}
+      }
+    },
+		"CronVolume" : {
+		   "Type" : "AWS::EC2::Volume",
+			 "Condition": "CreateCron",
+		   "Properties" : {
+		      "Size" : "200",
+		      "AvailabilityZone" : { "Fn::GetAtt" : [ "CronServerInstance", "AvailabilityZone" ] },
+		      "Tags" : [ {
+		         "Key" : "Name",
+		         "Value" : {
+	 							"Fn::Join": ["", [{
+	 								"Ref": "AWS::StackName"
+	 							}, "-cron-volume"]]
+	 						}
+		      } ]
+		   }
+		},
+		"CronVolumeMountPoint" : {
+		   "Type" : "AWS::EC2::VolumeAttachment",
+			 "Condition": "CreateCron",
+		   "Properties" : {
+		      "InstanceId" : { "Ref" : "CronServerInstance" },
+		      "VolumeId"  : { "Ref" : "CronVolume" },
+		      "Device" : "/dev/sdf"
+		   }
+		}
+	},
+	"Outputs": {
+		"BastionAAddress": {
+			"Value": {
+				"Fn::Join": ["", [{
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "a.myagi.com"]]
+					},
+					" (", {
+						"Ref": "BastionAIP"
+					},
+					")"
+				]]
+			}
+		},
+		"BastionBAddress": {
+			"Value": {
+				"Fn::Join": ["", [{
+						"Fn::Join": ["", [{
+							"Ref": "AWS::StackName"
+						}, "-gw-", {
+							"Ref": "AWS::Region"
+						}, "a.myagi.com"]]
+					},
+					" (", {
+						"Ref": "BastionBIP"
+					},
+					")"
+				]]
+			}
+		},
+		"Key": {
+			"Value": {
+				"Ref": "KeyName"
+			}
+		}
+	}
+}

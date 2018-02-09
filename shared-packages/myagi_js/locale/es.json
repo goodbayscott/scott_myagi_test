@@ -1,0 +1,1693 @@
+{
+  "about_this_channel": "Acerca de este canal",
+
+  "accept": "Aceptar",
+
+  "access_code": "Código de acceso",
+
+  "access_code_info":
+    "Asegura tu URL de Myagi configurando un código de acceso de la empresa. Los usuarios deberán introducir este código cuando se registren a través de tu URL Myagi (aunque no si son invitados directamente a tu empresa). Si no tienes una URL de Myagi, entonces no hay necesidad de establecer un código de acceso.",
+
+  "access_react_training":
+    "Regístrate en Myagi para conseguir acceso a contenido formativo exclusivo de React y ganar premios para tu tienda",
+
+  "accessibility": "Accesibilidad",
+
+  "accessibility_info":
+    "Cualquier empresa que esté en Myagi puede acceder a los canales públicos. Todas las empresas que estén dentro de Myagi pueden ver los detalles básicos sobre canales que son \"públicos pero piden solicitud de acceso\", excepto el contenido dentro de ellos, que no se puede ver a menos que el propietario apruebe la petición de acceso. Los canales privados solo pueden verse mediante la invitación directa del propietario.",
+
+  "account_deactivated": "Cuenta desactivada",
+
+  "account_disabled": "Cuenta desactivada",
+
+  "active": "Activo",
+
+  "add": "Añadir",
+
+  "add_a_lesson_to_the": "Añade una lección al",
+
+  "add_a_lesson_to_the_plan": "Añade una lección al plan '%(name)s' ",
+
+  "add_an_image": "Añadir una imagen",
+
+  "add_another_answer": "Añadir otra respuesta alternativa",
+
+  "add_any_url_or_webpage_here": "Añadir cualquier URL o página web aquí",
+
+  "add_badge": "Añadir insignia",
+
+  "add_card": "Agregar Tarjeta",
+
+  "add_existing_lesson": "Añadir lección existente",
+
+  "add_image": "Agregar Imagen",
+
+  "add_lesson": "Añadir lección",
+
+  "add_lessons_to_plan": "Añadir lecciones al plan",
+
+  "add_lessons_to_the": "Añadir lecciones a",
+
+  "add_lessons_to_the_name_plan": "Añade lecciones al plan '%(name)s'",
+
+  "add_my_retailer": "Añadir a mi minorista",
+
+  "add_plans": "Añadir planes",
+
+  "add_question": "Añadir pregunta",
+
+  "add_store": "Añade tu tienda",
+
+  "add_team": "Añadir equipo",
+
+  "add_text_here": "Escribe una actualización para tu empresa...",
+
+  "add_users": "Añadir usuarios",
+
+  "add_video": "Añadir vídeo",
+
+  "add_web_snippet": "Añadir fragmento de web ",
+
+  "admin_enrollment_notifications": "Notificaciones de inscripción de administrador",
+
+  "admin_enrollment_notifications_info":
+    "Entrará en vigor si alguno de tus planes no alcanza su potencial",
+
+  "all": "TODO",
+
+  "all_channels": "Todos los canales",
+
+  "all_content": "Todo el contenido",
+
+  "all_lessons": "Todas las lecciones",
+
+  "all_plans": "Todos los planes",
+
+  "all_time": "Todo el tiempo",
+
+  "all_user_admin_access":
+    "Todos los usuarios tienen acceso de administrador en los planes gratuitos. Myagi Pro te ofrece todo lo que necesitas al proporcionarte grupos, áreas y niveles de usuario para mantener organizada la formación de tu empresa.",
+
+  "all_you_retail_learning_material":
+    "Todo tu material de aprendizaje minorista en un solo lugar: no se necesita sesión de formación",
+
+  "allocation": "Asignación",
+
+  "allow_new_users_to_create_teams": "Permitir a los nuevos usuarios crear equipos",
+
+  "allow_new_users_to_create_teams_info":
+    "Si está habilitado, todos los nuevos usuarios podrán crear un nuevo equipo a través de la página de registro",
+
+  "allow_signup_invitations": "Permitir que todos los usuarios envíen invitaciones de registro",
+
+  "allow_signup_invitations_info":
+    "Si está habilitado, todos los usuarios pueden invitar a otros a unirse a tu empresa. Si está deshabilitado, solo los administradores y directores pueden invitar a usuarios.",
+
+  "already_have_an_account": "\u00bfYa tienes una cuenta?",
+
+  "already_using_myagi": "¿Ya utilizas Myagi? Inicia sesión",
+
+  "alternate_answers": "Respuestas alternativas",
+
+  "analytics": "Anal\u00edticos",
+
+  "any_comments_or_feedback_find_an": "\u00bfAlg\u00fana otra opini\u00f3n o comentario?",
+
+  "approx_num_people": "Promedio de empleados por tienda (aproximadamente)",
+
+  "approx_num_stores": "Número de tiendas explotadas por tu compañía (aprox.)",
+
+  "archive": "Archivar",
+
+  "archive_channel": "Archivar canal",
+
+  "archived": "Archivado",
+
+  "archived_channels": "Canales archivados",
+
+  "archived_lessons": "Lecciones archivadas",
+
+  "archived_plans": "Planes archivados",
+
+  "are_you_a_brand_or_retailer": "¿Eres una marca o un minorista?",
+
+  "are_you_sure": "\u00bfEst\u00e1 seguro?",
+
+  "are_you_sure_archive_channel": "¿Seguro que quieres archivar este canal?",
+
+  "are_you_sure_archive_channel_info":
+    "Los usuarios perderán acceso a todo el contenido de este canal.",
+
+  "are_you_sure_archive_connection": "¿Seguro que quieres eliminar esta conexión?",
+
+  "are_you_sure_archive_lesson":
+    "¿Seguro que quieres archivar esta lección? La eliminarás de todos los planes a los que está asociada actualmente.",
+
+  "are_you_sure_delete_area": "¿Estás seguro de que deseas eliminar este área?",
+
+  "are_you_sure_delete_group": "¿Seguro que quieres eliminar este grupo?",
+
+  "are_you_sure_delete_team": "¿Seguro que quieres eliminar este equipo?",
+
+  "are_you_sure_remove_area":
+    "¿Estás seguro de que quieres eliminar este equipo del ámbito %(name)s?",
+
+  "are_you_sure_remove_user": "¿Seguro que quieres eliminar %(removeUserName)s de tu empresa?",
+
+  "are_you_sure_remove_user_from_group":
+    "¿Estás seguro de que quieres eliminar a este usuario del grupo %(name)s?",
+
+  "are_you_sure_request": "¿Seguro que quieres eliminar esta solicitud?",
+
+  "are_you_trying_to_join_this": "¿Estás intentando unirte a esta empresa?",
+
+  "area": "Regi\u00f3n",
+
+  "area_name": "Nombre del ámbito",
+
+  "area_rank_is_determined_using_average":
+    "La posición de zona se determina usando la puntuación de formación media. La puntuación de formación media es el número total de preguntas respondidas correctamente por parte de los miembros de una zona dividido por el número de personas de esa zona. Para mejorar la posición de tu zona, haz que los miembros de tu zona intenten más lecciones y contesten a más preguntas correctamente.",
+
+  "areas": "Regi\u00f3nes",
+
+  "attempt": "Intento",
+
+  "attempt_questions": "Intento de Preguntas",
+
+  "attempts": "Intentos",
+
+  "auto_enroll": "Inscripción automática",
+
+  "auto_enroll_in_plans": "Inscripción automática en los planes",
+
+  "auto_enroll_in_plans_group_info":
+    "Todos los usuarios que se añadan a este grupo se inscribirán automáticamente en estos planes. Los miembros actuales de este equipo también se inscribirán en estos planes si aún no lo están.",
+
+  "auto_enroll_in_plans_info":
+    "Todos los usuarios que se agreguen a este equipo se inscribirán automáticamente en estos planes. Los miembros actuales de este equipo también se inscribirán en estos planes si aún no están inscritos.",
+
+  "auto_enroll_info":
+    "Si la inscripción automática está activada, todos los usuarios de tu propia empresa se inscribirán automáticamente en los planes que estén conectados a este canal.",
+
+  "auto_enroll_off": "Inscripción automática desactivada",
+
+  "auto_enroll_on": "Inscripción automática",
+
+  "automatic_enrollment": "Inscripción automática",
+
+  "automatic_enrollment_info":
+    "Elige \"Todos\" si quieres que todos los usuarios actuales y futuros de tu propia empresa se inscriban automáticamente en este plan. Como alternativa, elige 'Personalizado' para seleccionar los equipos individuales y grupos a los que quieras tener acceso.",
+
+  "average": "Promedio",
+
+  "average_learn_rating": "Calificación promedio de aprendizaje",
+
+  "average_lesson_score": "Puntuación media de las lecciones",
+
+  "average_like_rating": "Puntuación media de Me gusta",
+
+  "average_score": "Puntuación media",
+
+  "back": "Atrás",
+
+  "back_to_channel": "Volver al canal",
+
+  "back_to_edit": "Volver a editar",
+
+  "back_to_plans": "Volver a planes de entrenamiento",
+
+  "back_to_review": "Volver a revisar",
+
+  "badge": "Insignia",
+
+  "badge_archive_info": "Esta insignia se archivará y los usuarios ya no podrán acceder a ella.",
+
+  "badge_description": "Descripción de la insignia",
+
+  "badge_image": "Imagen de la insignia",
+
+  "badge_name": "Nombre de insignia",
+
+  "badges": "Insignias",
+
+  "become_an_expert_in_experiential_retail":
+    "Vuélvete un experto en venta al por menor, no en fábulas",
+
+  "by": "por",
+
+  "cancel": "Cancelar",
+
+  "cancel_request": "Cancelar solicitud",
+
+  "cant_find_your_company": "\u00bfNo puede encontrar su empresa?",
+
+  "card_text": "Texto de la tarjeta",
+
+  "challenge_a_teammate": "Retar a un compa\u00f1ero",
+
+  "challenges": "Desaf\u00edos",
+
+  "challenges_count": "Desafíos (%(count)s)",
+
+  "change_credit_card": "Cambiar tarjeta de cr\u00e9dito",
+
+  "change_password": "Cambiar contrase\u00f1a",
+
+  "changes_saved": "Cambios guardados",
+
+  "channel_autoenrol_info":
+    "Todos los usuarios de tu empresa se inscribirán automáticamente en los planes que están conectados a este canal.",
+
+  "channel_currently_archived":
+    "Este canal actualmente está archivado. Los canales archivados no se pueden editar ni compartir. ¿Te gustaría restaurarlo desde el archivo?",
+
+  "channel_ignored": "Canal ignorado",
+
+  "channel_no_autoenrol_info":
+    "Los usuarios de tu empresa ya no se inscribirán automáticamente en este canal. Las inscripciones actuales no se eliminarán.",
+
+  "channel_notifications": "Notificación de canal",
+
+  "channel_notifications_info":
+    "Actividad sobre nuevo contenido, suscripciones y solicitudes para acceder a canales",
+
+  "channel_sharing": "Compartir canales",
+
+  "channel_stats": "Estado del canal",
+
+  "channel_tags": "Etiquetas de canal",
+
+  "channel_tags_info":
+    "Se sugerirá tu canal a todas las empresas que coincidan con las etiquetas que introduzcas aquí.",
+
+  "channels": "Canales",
+
+  "chat_to_us": "Habla con nosotros",
+
+  "choose_company_to_join": "Por favor, escoge una empresa a la que unirte",
+
+  "clear_filters": "Eliminar filtros",
+
+  "click": "Clic",
+
+  "click_here": "Haz clic aquí",
+
+  "click_here_to_access_the_reward": "Click here to access reward!",
+
+  "click_here_to_add_some": "Haz clic aquí para añadir algunos",
+
+  "click_on_the_tags_below_which":
+    "Haga clic en las siguientes etiquetas que son relevantes para su empresa. Busque marcas y categor\u00edas de productos de las existencias de su empresa, as\u00ed como las regiones geogr\u00e1ficas relevantes. Esto nos ayudar\u00e1 a recomendarle el mejor contenido.",
+
+  "code": "Código",
+
+  "codes_already_distributed": "Códigos que ya se han distribuido a los usuarios",
+
+  "comments": "Comentarios",
+
+  "community": "Comunidad",
+
+  "company": "Empresa",
+
+  "company_access_code": "C\u00f3digo de acceso de la empresa",
+
+  "company_auto_enroll": "Inscripción automática en la empresa",
+
+  "company_channels": "Canales de la compañía",
+
+  "company_connection_info":
+    "Puedes distribuir el contenido de tu canal a otras empresas creando una conexión de canal. Cuando lo hagas, las empresas que estén conectadas a tu canal aparecerán aquí. Cuando las empresas soliciten utilizar tus canales, estas solicitudes aparecerán también aquí, para que puedas aprobarlas o rechazarlas.",
+
+  "company_connections": "Conexiones salientes de empresas",
+
+  "company_cover_image": "Imagen de cubierta de la empresa",
+
+  "company_legal_name": "Nombre comercial legal de la empresa",
+
+  "company_legal_name_info":
+    "Esto es solo para uso interno (puede abrirse a todos los usuarios si se desea).",
+
+  "company_logo": "Logotipo de la compañía",
+
+  "company_name": "Nombre de la empresa",
+
+  "company_plans": "Planes de la compañía",
+
+  "company_rank": "Rango de la empresa",
+
+  "company_rank_for_month": "Clasificación en el mes",
+
+  "company_rank_for_month_ext": "Clasificación de la empresa en el mes pasado",
+
+  "company_website_url_optional": "URL del sitio web de la compañía",
+
+  "company_will_no_long_be_able_to_access_channel":
+    "%(company)s ya no tendrá acceso a este canal. ",
+
+  "company_will_no_longer_have_access_to_content":
+    "%(company)s ya no podrá acceder a este contenido",
+
+  "compete_with_other_branches":
+    "Compite con otras sucursales, mira las tablas de clasificación del personal y premia el aprendizaje de tu equipo con las herramientas de ramificación de Myagi.",
+
+  "competition_period": "Período de competencia",
+
+  "complete": "Completar",
+
+  "complete_previous_plans": "Debes completar los planes previos antes de poder iniciar este.",
+
+  "complete_the_latest_plan": "Finalizar el último plan de %(creator_name)s",
+
+  "complete_your_next_plan": "Completar tu siguiente plan",
+
+  "completed": "Completado",
+
+  "completed_action_items": "Elementos de acción completados",
+
+  "completed_all_lessons_access_more":
+    "¡Has completado todas las lecciones disponibles! Haz clic aquí para acceder a más contenido.",
+
+  "completed_all_lessons_ask_manager":
+    "¡Has completado todas las lecciones disponibles! Habla con tu administrador o el administrador de la empresa para acceder a más contenido.",
+
+  "completed_count_lessons_from_plans": "ha completado %(count)s lecciones de estos planes",
+
+  "completed_on_date": "% (fecha)s completadas",
+
+  "completed_one_lesson_from_plans": "ha completado 1 lección de estos planes",
+
+  "completed_plans": "Planes Completados",
+
+  "completing_this_plan_contributes_to_earning":
+    "Completar este plan contribuye a ganarse la insignia %(badgeName)s",
+
+  "confirm_password": "Confirmar Password",
+
+  "congratulations_you_earned_this_badge":
+    "Congratulations! You earned this badge by completing the plans below.",
+
+  "congratulations_you_have_completed_all_lessons":
+    "¡Felicitaciones! Ha completado todos los lecciones en el plan de formación '%(planName)s' .",
+
+  "connect": "Conectar",
+
+  "connect_to_access": "Conéctate para acceder a este contenido.",
+
+  "connect_to_all": "Conectar a todos",
+
+  "connect_to_key_partners":
+    "Conecta con socios clave en tu cadena de suministro para compartir conocimientos de forma segura",
+
+  "connected": "Conectado",
+
+  "connected_companies": "Compañías vinculadas",
+
+  "connection_accepted": "Conexión aceptada. ¿Añadir canal para inscribirse automáticamente?",
+
+  "connection_created": "Conexión creada",
+
+  "connection_requested": "Conexión necesaria",
+
+  "connection_requested_if_not_exists": "Solicitud de conexión creada si no existía ya previamente",
+
+  "connections": "Conexiones",
+
+  "content": "Contenido",
+
+  "continue": "Continuar",
+
+  "continue_to_myagi": "Continuar a Myagi",
+
+  "copied": "Copiado",
+
+  "copy_link": "Copiar enlace",
+
+  "correct": "Correcto",
+
+  "correct_answer": "Respuesta correcta",
+
+  "cover_image": "Imagen de cubierta",
+
+  "cover_photo": "Foto de portada",
+
+  "create": "Crear",
+
+  "create_a_document": "Crear un documento con texto e imágenes",
+
+  "create_a_new_challenge": "Crear un nuevo desafío",
+
+  "create_a_new_lesson": "Crear nueva lección",
+
+  "create_a_new_plan": "Crear un nuevo plan",
+
+  "create_area": "Crear área",
+
+  "create_badge": "Crear insignia",
+
+  "create_channel": "Crear canal",
+
+  "create_connections": "Crear conexiones",
+
+  "create_content": "¿Sin contenido? Por qué no crea un poco:",
+
+  "create_group": "Crear grupo",
+
+  "create_groups_desc":
+    "Crea grupos y ámbitos para personalizar cómo se entrega el contenido a tus usuarios",
+
+  "create_lesson": "Crear lección",
+
+  "create_link": "Crear enlace",
+
+  "create_my_company": "Crear mi propia empresa",
+
+  "create_one_here": "Crear una aqu\u00ed",
+
+  "create_one_now": "Crea uno ahora",
+
+  "create_or_go_to_discover": "¿Sin contenido? Por qué no encuentra o crea un poco:",
+
+  "create_password": "Crear contraseña",
+
+  "create_plan": "Crear plan",
+
+  "create_post": "Crear publicación",
+
+  "create_sharelink": "Crear enlace compartido",
+
+  "create_sharelink_info":
+    "Los enlaces para compartir son vínculos personalizados que te permiten compartir tu contenido con gente no perteneciente a tu organización. Cuando alguien utiliza tu enlace, obtiene acceso de inmediato a tus canales una vez se haya registrado. Puedes activar o desactivar estos enlaces en cualquier momento.",
+
+  "create_team": "Crear equipo",
+
+  "created_a_lesson": "ha creado una nueva lección en el siguiente plan",
+
+  "created_a_plan": "creado un nuevo plan",
+
+  "created_by": "Creado por",
+
+  "crop_photo": "Recortar foto",
+
+  "curated": "Seleccionado",
+
+  "current_enrollments": "Inscripciones actuales",
+
+  "current_enrollments_info":
+    "Utiliza esto para ver a todos los usuarios que actualmente tienen acceso a este plan, ya sea a través de la inscripción automática o manual.",
+
+  "current_password": "Contrase\u00f1a actual",
+
+  "custom": "Personalizar",
+
+  "daily": "Diariamente",
+
+  "deactivate": "Desactivar",
+
+  "deactivate_user_info":
+    "Esto significará que %(selectedUser)s ya no podrá iniciar sesión y utilizar Myagi.",
+
+  "delete": "Borrar",
+
+  "department_manager": "Director del departamento",
+
+  "description": "Descripción",
+
+  "details": "Detalles",
+
+  "did_you_mean_companies": "Quisiste decir una de estas empresas",
+
+  "didnt_feel_like_selecting_any_content":
+    "\u00bfNo tiene ganas de seleccionar alg\u00fan contenido?",
+
+  "digest_notifications": "Notificaciones de resumen",
+
+  "digest_notifications_info":
+    "Notificaciones sobre contenido recomendado que pueden interesarte para ayudarte a mantenerte actualizado",
+
+  "discard_changes": "Descartar cambios",
+
+  "discard_confirm":
+    "¿Seguro que quieres descartar tu trabajo? Los cambios que no se hayan guardado se perderán.",
+
+  "discount_url": "Descuento de URL:",
+
+  "discover": "Descubrir",
+
+  "discover_content": "Descubre contenido",
+
+  "discuss_with_others": "Hablar con otras personas",
+
+  "disenroll_myself": "Anular mi inscripci\u00f3n",
+
+  "display_name": "Nombre para mostrar",
+
+  "display_name_info":
+    "El nombre para mostrar es lo que otras empresas y usuarios verán cuando vean este canal. Si no configuras un nombre para mostrar, se establecerá de manera predeterminada el nombre del canal.",
+
+  "displayed_as": "Mostrado como",
+
+  "document": "Documento",
+
+  "done": "Terminado",
+
+  "dont_have_an_account": "\u00bfNo tienes una cuenta?",
+
+  "dont_worry_you_can_select_some":
+    "No se preocupe, puede seleccionar algunos despu\u00e9s, o puedes crear el suyo en un santiam\u00e9n. Simplemente haga clic en 'Crear plan' desde la pantalla de inicio dentro de Myagi.",
+
+  "download_myagi_app": "Descargar aplicación Myagi",
+
+  "due": "Fecha de vencimiento",
+
+  "due_from_now": "%(fecha)s de vencimiento",
+
+  "due_soon": "Pr\u00f3xima fecha de vencimiento",
+
+  "edit": "Editar",
+
+  "edit_area": "Editar ámbito",
+
+  "edit_badge": "Editar insignia",
+
+  "edit_channel": "Editar canal",
+
+  "edit_details": "Editar Detalles",
+
+  "edit_details_for_user": "Editar detalles para %(firstName)s",
+
+  "edit_pdf": "Editar PDF",
+
+  "edit_question": "Editar pregunta",
+
+  "edit_team": "Editar equipo",
+
+  "edit_web_snippet": "Editar fragmento de web",
+
+  "educate_your_team": "Instruye, comunícate y colabora con tu equipo al completo",
+
+  "email": "Correo electrónico",
+
+  "email_address_not_found": "Direcci\u00f3n de correo electr\u00f3nico no encontrada",
+
+  "enroll": "Inscr\u00edbase",
+
+  "enroll_users": "Inscribir usuarios",
+
+  "enrolled": "INSCR\u00cdBASE",
+
+  "enrolled_plans": "Planes inscritos",
+
+  "enrolled_users": "Usuarios inscritos",
+
+  "enrollment_group_rank_is_determined_using":
+    "La posición del grupo de inscripción se determina mediante la puntuación media de formación. La puntuación media de formación es el número total de preguntas respondidas correctamente por los miembros de un grupo de inscripción dividido por el número de personas que hay en ese grupo de inscripción. Para mejorar la posición de tu grupo de inscripción, solicita a los miembros de tu grupo de inscripción que intenten más lecciones y respondan a más preguntas correctamente.",
+
+  "enrollment_groups": "Grupos de matr\u00edcula",
+
+  "enrollments": "Inscripciones",
+
+  "enter_a_name": "Introduce un nombre para tu enlace compartido",
+
+  "enter_emails_of_users": "Enter emails of users to invite separated by a comma",
+
+  "enter_unique_discount":
+    "Introduce códigos de descuento únicos separados por una coma, o un código por línea",
+
+  "enter_unique_discount_info":
+    "Cuando un usuario gane una insignia, el código se emitirá al usuario y se eliminará de la lista de códigos únicos. Te enviaremos un recordatorio por correo electrónico cuando queden menos de diez códigos.",
+
+  "enter_video_link": "Introduce un enlace a YouTube o Vimeo",
+
+  "enter_your_company_website_url": "Introduce la URL del sitio web de tu empresa.",
+
+  "error": "Error",
+
+  "error_creating_company": "Error al crear la empresa",
+
+  "error_file_too_large": "Error: el archivo es demasiado grande. Debe pesar menos de 10 MB",
+
+  "error_png_jpg": "Error: selecciona un png o jpg válido",
+
+  "estimated_time": "Tiempo Estimado",
+
+  "everyone": "Todo el mundo",
+
+  "existing_company": "Empresa existente",
+
+  "external_channels": "Canales externos",
+
+  "external_plans": "Planes externos",
+
+  "extremely_likely": "Muy probable",
+
+  "failed": "Fracasado",
+
+  "failed_to_create_request":
+    "Error al crear la solicitud porque ya existe una invitación o porque ya estás suscrito.",
+
+  "feed": "Fuente",
+
+  "feedback_submissions": "Envíos de comentarios",
+
+  "filter": "Filtro",
+
+  "filter_channels": "Filtrar canales",
+
+  "find_and_follow_content_you_would": "Encuentre y siga el contenido que desear\u00eda ver",
+
+  "find_content": "Buscar contenido",
+
+  "find_content_share_content": "Encontrar y compartir contenido con tu equipo",
+
+  "find_more_channels": "Encuentra más contenido",
+
+  "finish": "Terminar",
+
+  "finish_selecting": "Terminar de seleccionar",
+
+  "first_name": "Nombre",
+
+  "flip_card": "Tarjeta de referencia",
+
+  "flip_card_explaination":
+    "Añade fichas de estudio a tu lección para enseñar conceptos clave a las personas de una forma simple. Coloca un término, concepto o cosa en el anverso, luego una explicación o definición en el reverso.",
+
+  "flip_card_explaination_header": "¿Qué son las tarjetas?",
+
+  "forgot_your_password": "\u00bfHas olvidado la contrase\u00f1a?",
+
+  "free": "Gratis",
+
+  "front": "Portada",
+
+  "full_name": "Nombre Completo",
+
+  "gamify_your_staffs_learning_experience": "Ramifica la experiencia de aprendizaje de tu personal",
+
+  "get_access_to_content":
+    "No hay planes disponibles. Pídale a su gerente o administrador de la empresa que lo inscriba en algunos.",
+
+  "get_started": "Iniciar",
+
+  "get_the_app": "Obtén la aplicación",
+
+  "get_your_free_myagi_account": "Consigue tu cuenta gratuita de Myagi",
+
+  "give_feedback": "Proporcionar retroalimentaci\u00f3n",
+
+  "google_slides_url_not_embeddable":
+    "Parece que la URL de Presentaciones de Google que has proporcionado no es la versión integrable. ",
+
+  "group_name": "Nombre del grupo",
+
+  "groups": "Grupos",
+
+  "hang_tight_microdecks":
+    "¡Ten paciencia! La edición de \"microdecks\" desde esta pantalla todavía no es compatible.",
+
+  "has_shared_training_plan": "ha compartido el siguiente plan de entrenamiento contigo",
+
+  "has_shared_training_plans": "ha compartido los siguientes planes de entrenamiento contigo",
+
+  "head_office_staff": "Personal de la oficina central",
+
+  "help_center": "Centro de ayuda",
+
+  "help_us_explain_nps": "Ayúdanos explicando tu puntuación.",
+
+  "here": "aqu\u00ed",
+
+  "hide_analytics": "Ocultar análisis",
+
+  "hide_archived": "Esconder archivados",
+
+  "home": "Inicio",
+
+  "how_can_we_improve": "\u00bfComo podemos mejorar?",
+
+  "how_did_you_find_the_lesson": "¿Qué te ha parecido la lección?",
+
+  "how_likely_are_you_to_recommend":
+    "\u00bfQu\u00e9 probabilidades hay de que recomiende este contenido a un compa\u00f1ero?",
+
+  "how_much_did_you_learn_from": "\u00bfCu\u00e1nto aprendiste de este contenido?",
+
+  "how_much_did_you_like_this": "\u00bfCu\u00e1nto te gust\u00f3 este contenido?",
+
+  "how_useful_was_this_content": "\u00bfCu\u00e1n \u00fatil fue este contenido?",
+
+  "how_would_you_rate_the_quality":
+    "\u00bfC\u00f3mo calificar\u00eda la calidad de este contenido?",
+
+  "i_already_have_an_account": "Ya tengo cuenta",
+
+  "i_am_using_a_shared_computer": "\u00bfUsando una computadora p\u00fablica?",
+
+  "if_store_not_listed":
+    "Si tu tienda no figura en la lista, deja este campo en blanco o selecciona 'Otro'",
+
+  "if_you_are_having_trouble_viewing": "Si tiene problemas para visualizar este documento.",
+
+  "if_you_leave_this_page_your": "Si sale de esta p\u00e1gina, su intento ser\u00e1 incompleto.",
+
+  "if_you_were_invited_here_by":
+    "Si usted fue invitado por otra empresa, seleccione la empresa en la cual trabaja, no la compa\u00f1\u00eda que lo ha invitado.",
+
+  "ignore": "Ignorar",
+
+  "image": "Imagen",
+
+  "image_is_currently_uploading": "La imagen se est\u00e1 cargando",
+
+  "image_updated": "Imagen actualizada",
+
+  "important_notifications": "Notificaciones importantes",
+
+  "important_notifications_info":
+    "Problemas relacionados con la seguridad, así como problemas de configuración que evitarán que los usuarios consuman tu contenido",
+
+  "inbox": "Bandeja de entrada",
+
+  "incomplete": "Incompleto",
+
+  "incomplete_plans": "Planes incompletos",
+
+  "incorrect": "Incorrecto",
+
+  "incorrect_password": "Contrase\u00f1a incorrecta",
+
+  "input_your_store": "Introduce tu tienda",
+
+  "introductory_video": "Vídeo de introducción",
+
+  "introductory_video_info":
+    "Esto debería ser un vídeo introductorio para que otros aprendan más sobre este canal. Otros usuarios y empresas lo pueden ver si está habilitado.",
+
+  "invalid_email_or_password":
+    "Direcci\u00f3n de correo electr\u00f3nico o contrase\u00f1a no v\u00e1lidos",
+
+  "invitation_notifications": "Notificaciones de invitaciones",
+
+  "invitation_notifications_info":
+    "Información sobre solicitudes y aprobación para que los usuarios se unan a tu empresa",
+
+  "invite_companies_to_connect": "Invitar compañías para conectar",
+
+  "invite_companies_to_subscribe": "Invitar compañías a suscribirse",
+
+  "invite_users": "Invitar a usuarios",
+
+  "invites": "Invitaciones",
+
+  "issue_with_this_lesson": "¿Has tenido algún problema con esta lección?",
+
+  "job_title": "T\u00edtulo del trabajo",
+
+  "join": "Unirse",
+
+  "join_this_company": "\u00danase a esta empresa",
+
+  "joined_company": "se ha unido a %(company)s",
+
+  "just_fill_out_the_details":
+    "Just fill out the details below, press 'Submit' and an invite link will be created.",
+
+  "keep_your_whole_team": "Mantén a tu equipo sincronizado y capacitado, todo en el mismo lugar",
+
+  "language": "Lenguaje",
+
+  "last_name": "Apellido",
+
+  "leaderboard": "Tabla de posiciones",
+
+  "leaderboards": "Tabla de posiciones",
+
+  "learn_about_embeddable": "Haz clic aquí para descubrir cómo conseguir tu URL integrable. ",
+
+  "learn_about_this_channel": "Aprende sobre este canal",
+
+  "learn_rating": "Aprender calificación",
+
+  "learn_something_useful": "aprenda algo \u00fatil",
+
+  "leave_thumbnail_blank":
+    "Si dejas esto en blanco, trataremos de seleccionar una miniatura del contenido interno",
+
+  "lesson": "Lección",
+
+  "lesson_average": "Promedio de la lección",
+
+  "lesson_does_not_belong_to_plan":
+    "Esta lección no pertenece a un plan publicado. Regresa a tu plan para publicar e inscribir usuarios.",
+
+  "lesson_feedback": "Retroalimentaci\u00f3n del m\u00f3dulo",
+
+  "lesson_feedback_notifications": "Notificaciones de comentarios de la lección",
+
+  "lesson_feedback_notifications_info":
+    "Recibe notificaciones cuando los usuarios dejen comentarios en tus lecciones",
+
+  "lesson_score": "Puntuaci\u00f3n del m\u00f3dulo",
+
+  "lessons": "m\u00f3dulos",
+
+  "lessons_must_be_added": "Las lecciones deben agregarse a este plan antes de que pueda tomarse",
+
+  "like_rating": "Valoración de Me gusta",
+
+  "loading_with_dots": "Cargando...",
+
+  "log_in": "Inicio de sesión",
+
+  "log_in_here": "Inicia sesión aquí",
+
+  "login_to_myagi": "Inicie sesi\u00f3n en Myagi",
+
+  "logo": "Logo",
+
+  "logout": "Cerrar sesi\u00f3n",
+
+  "manage_enrollments": "Gestionar inscripciones",
+
+  "manage_lessons": "Gestionar lecciones",
+
+  "managers": "Directores",
+
+  "manual_enrollments": "Inscripción manual",
+
+  "manual_enrollments_info":
+    "Selecciona usuarios específicos si deseas tener un mayor control sobre quién puede acceder a este plan.",
+
+  "maximum_file_size_is": "El tamaño de archivo máximo es %(size)s",
+
+  "minutes": "minutos",
+
+  "mobile_number": "Tel\u00e9fono celular",
+
+  "monthly": "Mensual",
+
+  "more": "M\u00e1s",
+
+  "more_lessons": "Más lecciones",
+
+  "must_add_plans_to_channel_before_creating_badge":
+    "Debes añadir algunos planes a este canal antes de poder crear una insignia para él.",
+
+  "must_be_at_least_minlength_characters": "Debe tener al menos %(minLength)s caracteres",
+
+  "must_be_no_more_than_maxlength": "No debe tener más de %(maxLength)s caracteres",
+
+  "my_team_plans": "Tus planes de equipo",
+
+  "myagi_gives_you_access_to_exclusive_content":
+    "Myagi te da acceso al contenido de formación exclusivo de las marcas que ya tienes en dos clics de ratón.",
+
+  "myagi_staff": "Personal de Myagi",
+
+  "myagi_url_settings_info":
+    "Los usuarios pueden visitar tu URL para registrarse en Myagi y unirse a tu compañía. Debes dar tu URL a todos los que trabajan para tu empresa. Borra esta entrada y haz clic en 'Guardar' para deshabilitar tu URL.",
+
+  "myagis_learning_network":
+    "La red de aprendizaje de Myagi convierte a los receptores de pedidos en creadores de experiencias y te prepara para vender más.",
+
+  "myagis_supplier_network":
+    "El mercado de proveedores de Myagi te proporciona acceso instantáneo al contenido de formación exclusivo de las marcas que vendes.",
+
+  "myagis_training_platform_empowers_your_team":
+    "La plataforma de formación de Myagi le permite a tu equipo pasar de encargados de pedidos a creadores de experiencias.",
+
+  "name": "Nombre",
+
+  "name_az": "Nombre (A-Z)",
+
+  "name_your_sharelink": "Nombre",
+
+  "name_za": "Nombre (Z-A)",
+
+  "never": "Nunca",
+
+  "new_password": "Nueva contrase\u00f1a",
+
+  "new_plans": "Nuevos planes",
+
+  "new_request_from_company": "Nueva solicitud de %(company)s",
+
+  "newest": "Más reciente",
+
+  "next": "Siguiente",
+
+  "next_for_today": "Siguiente",
+
+  "next_lesson": "Siguiente m\u00f3dulo",
+
+  "next_plan": "Próximo plan",
+
+  "no": "No",
+
+  "no_action_items": "Todos los elementos de acción se han completado",
+
+  "no_activity": "No hay feeds para mostrar",
+
+  "no_areas_available": "No hay áreas disponibles.",
+
+  "no_available_users_matching_search":
+    "No hay usuarios disponibles que coincidan con esta búsqueda",
+
+  "no_badges_create_one": "No hay insignias para este canal ¿Por qué no hay?",
+
+  "no_badges_have_been_earned": "No ha sido ganada ninguna insignia.",
+
+  "no_changes_made": "No se han realizado cambios",
+
+  "no_channels_available": "No hay canales disponibles",
+
+  "no_comments_for_this_lesson": "No hay comentarios para esta lección",
+
+  "no_companies_match_the_search_term":
+    "No hay empresas que coincidan con el t\u00e9rmino de b\u00fasqueda que introdujo",
+
+  "no_content": "No hay contenido",
+
+  "no_content_click_here_to_get": "\u00bfNo hay contenido ? Haga clic aqu\u00ed para acceder",
+
+  "no_content_create_some":
+    "¿No tienes contenido? Crea algo ahora haciendo clic en el botón \"Crear plan\" arriba",
+
+  "no_content_manage_channels": "Sin contenido. Haz clic aquí para administrar los canales.",
+
+  "no_due_date": "Sin fecha de vencimiento",
+
+  "no_groups_available": "No hay grupos disponibles.",
+
+  "no_i_want_to_create_a": "No, creo crear una nueva empresa",
+
+  "no_lessons": "No hay m\u00f3dulos",
+
+  "no_lessons_available": "No hay lecciones disponibles",
+
+  "no_likely_at_all": "No es probable en absoluto",
+
+  "no_myagi_send_sharelink":
+    "Si la empresa que estás buscando no tiene una cuenta Myagi, puedes enviarle un enlace compartido",
+
+  "no_myagi_url": "No tienes URL de Myagi ",
+
+  "no_outstanding_connection_requests":
+    "No hay solicitudes de conexión pendientes. Intenta seleccionar otro filtro.",
+
+  "no_outstanding_invitations": "No hay invitaciones pendientes para el usuario.",
+
+  "no_plans": "No hay planes",
+
+  "no_plans_available": "No hay planes disponibles",
+
+  "no_plans_available_add_some": "No hay planes para este canal. ¿Qué tal si añades unos cuantos?",
+
+  "no_plans_available_connect":
+    "No hay planes disponibles en este canal en este momento. Conéctate a este canal para obtener actualizaciones cuando se añada más contenido.",
+
+  "no_plans_found": "No se han encontrado planes",
+
+  "no_search_results": "Vaya... No hay nada que coincida con tu búsqueda",
+
+  "no_team": "No ha equipo",
+
+  "no_teams_available": "No hay equipos disponibles.",
+
+  "no_users_available": "No hay usuarios disponibles",
+
+  "no_users_matching_search": "No hay usuarios que coincidan con esta búsqueda",
+
+  "none": "Ninguno",
+
+  "not_completed": "No ha sido completado",
+
+  "not_connected_to_channels": "Su empresa no está conectada a ningún canal",
+
+  "not_your_logo": "\u00bfNo es tu logo?",
+
+  "notice": "Aviso",
+
+  "notifications": "Notificaciones",
+
+  "nps_recommend_friend":
+    "¿Con qué probabilidad recomendarías Myagi a un amigo o compañero de trabajo?",
+
+  "nps_thankyou_why": "¡Gracias! ¿Te importa decirnos por qué?",
+
+  "num_comments": "%(num) comentarios",
+
+  "num_questions_correct_to_pass": "%(questions)s correcta",
+
+  "number_total_lesson": "%(number)s / %(total)s lección",
+
+  "number_total_lessons": "%(number)s / %(total)s lecciones",
+
+  "numbertotal_correct": "%(number)s / %(total)s correcto",
+
+  "oldest": "Más antiguo",
+
+  "one_comment": "1 comentario",
+
+  "oops_that_email_is_being_used":
+    "Ups, el correo electr\u00f3nico est\u00e1 siendo utilizado. \u00bfQuiz\u00e1s intente iniciar la sesi\u00f3n?",
+
+  "optimal_size_size": "tamaño óptimo: %(size)s",
+
+  "optional": "Opcional",
+
+  "or": "O",
+
+  "or_add_retailer": "O añadir a tu minorista",
+
+  "or_create_company": "O crear tu propia empresa",
+
+  "order_will_be_randomized": "el orden será aleatorio",
+
+  "passed": "Aprobado",
+
+  "passed_lessons": "M\u00f3dulos aprobados",
+
+  "password": "Contrase\u00f1a",
+
+  "password_entered_was_incorrect": "¡La contraseña que has introducido es incorrecta!",
+
+  "password_must_contain_one_uppercase_letter":
+    "La contrase\u00f1a debe contener una letra may\u00fascula y un n\u00famero",
+
+  "password_reset": "Restablecimiento de contrase\u00f1a",
+
+  "past_month": "Último mes",
+
+  "past_week": "Semana pasada",
+
+  "pdf": "PDF",
+
+  "pending": "Pendiente",
+
+  "people": "Personas",
+
+  "performance_notification_frequency": "Frecuencia de las notificaciones de rendimiento",
+
+  "performance_notifications": "Notificaciones de rendimiento",
+
+  "performance_notifications_info":
+    "Correos electrónicos de aviso con un resumen de tu rendimiento durante la semana pasada.",
+
+  "personal_message": "Personal Message",
+
+  "personalise_your_sharelink": "Personaliza tu enlace compartido",
+
+  "plan": "Plan",
+
+  "plan_channels": "Canales del plan",
+
+  "plan_details": "Detalles del plan",
+
+  "plan_enrollment": "Inscripción al plan",
+
+  "plan_lessons": "Lecciones del plan",
+
+  "plan_locked": "Plan bloqueado",
+
+  "plans": "Planes de Entrenamiento",
+
+  "plans_from_my_channels": "Planes de mis canales",
+
+  "plans_from_subscribed_channels": "Planes de los canales suscritos",
+
+  "plans_without_channel": "Planes sin canal",
+
+  "please_click": "Por favor, haga clic",
+
+  "please_click_here_if_you_are":
+    "Haga clic aqu\u00ed si tiene problemas para visualizar este documento.",
+
+  "please_contact_us_if_you_dont":
+    "Por favor, p\u00f3ngase en contacto con nosotros si no lo recibe en pocos minutos",
+
+  "please_enter_a_valid_email_address":
+    "Por favor, introduzca una direcci\u00f3n de correo electr\u00f3nico v\u00e1lida.",
+
+  "please_enter_a_valid_name": "Escribe un nombre válido para tu plan",
+
+  "please_enter_a_valid_url": "Introduce una URL válida.",
+
+  "please_select_a_star_rating":
+    "Por favor, seleccione una clasificación de estrellas para ambos campos",
+
+  "please_select_channel": "Selecciona un(os) canal(es)",
+
+  "plus_count_more": "+ %(count)s más",
+
+  "post_explaination":
+    "Anuncia información a tu empresa creando una publicación. Esta publicación podrán verla todos los usuarios de tu empresa.",
+
+  "preview": "Vista previa",
+
+  "private": "Privado",
+
+  "profile": "Perfil",
+
+  "profile_details_saved": "Detalles del perfil guardados",
+
+  "profile_photo": "Foto de perfil",
+
+  "progress": "Progreso",
+
+  "provide_private_feedback": "Proporcionar comentarios privados",
+
+  "public": "Público",
+
+  "published": "Publicado",
+
+  "q": "P",
+
+  "question": "Pregunta",
+
+  "question_number_of_total": "Pregunta %(number)s de %(total)s",
+
+  "questions_and_answers": "Preguntas y Respuestas",
+
+  "rank": "Ranking",
+
+  "recommended": "Recomendado",
+
+  "redemption_code_info":
+    "Este código de canje se otorgará a TODOS los usuarios cuando obtengan esta insignia.",
+
+  "region": "Región",
+
+  "region_info":
+    "Selecciona la región en la que opera tu empresa. Esto nos ayudará a recomendarte el contenido más adecuado para ti.",
+
+  "reject": "Rechazar",
+
+  "relevance": "Relevancia",
+
+  "remove": "Eliminar",
+
+  "remove_connection": "Eliminar conexión",
+
+  "remove_existing_enrollments": "Eliminar inscripciones actuales",
+
+  "remove_it": "Quitarlo",
+
+  "remove_last_badge":
+    "Este plan tiene al menos una insignia asociada. Si eliminas este plan, ya no se podrá acceder a la insignia. ¿Seguro que quieres eliminarlo de este canal?",
+
+  "reports": "Informes",
+
+  "report_an_issue": "Report an issue",
+
+  "request_access": "Solicitar acceso",
+
+  "request_failed": "Solicitud fallida",
+
+  "request_from_company": "Solicitud de %(company)s",
+
+  "request_to_access": "Solicitar acceder",
+
+  "requested": "Solicitado",
+
+  "requested_by_them": "Solicitado por ellos",
+
+  "requested_by_your_company": "Solicitado para tu empresa",
+
+  "requests": "Solicitudes",
+
+  "requests_for_your_content": "Solicitudes para tu contenido",
+
+  "require_entire_video_watched": "Exigir que se vea el vídeo entero",
+
+  "require_sequential_completion": "Los usuarios deben completar planes para poder",
+
+  "required": "Exigido",
+
+  "required_score": "Puntuaci\u00f3n Necesaria",
+
+  "required_viewing": "Vista obligatoria",
+
+  "requires": "Requiere",
+
+  "reset": "Restablecer",
+
+  "restore_from_archive": "Restaurar desde el archivo",
+
+  "retake": "Repetir",
+
+  "retake_lesson": "Volver a tomar el m\u00f3dulo",
+
+  "reward_code": "C\u00f3digo de recompensa",
+
+  "reward_details": "Detalles de la recompensa",
+
+  "reward_url": "URL de recompensa",
+
+  "role": "Rol",
+
+  "sales_associate": "Auxiliar de ventas",
+
+  "save": "Guardar",
+
+  "save_continue": "Guardar y continuar",
+
+  "saved": "Guardados",
+
+  "scroll_for_more_answers": "Despl\u00e1cese para obtener m\u00e1s respuestas",
+
+  "search": "B\u00fasqueda",
+
+  "search_and_select_retailer":
+    "Busca y selecciona a tu minorista de la lista anterior o introduce el nombre de tu minorista",
+
+  "search_for_tags_with_dots": "Busca etiquetas...",
+
+  "search_retailer": "Buscar a tu minorista",
+
+  "select_a_pdf_file": "Seleccionar un archivo PDF",
+
+  "select_a_source": "Selecciona un origen",
+
+  "select_a_team": "Seleccione un equipo",
+
+  "select_a_video": "Selecciona un vídeo",
+
+  "select_channel": "Seleccionar canal",
+
+  "select_channels": "Canales",
+
+  "select_channels_accessible": "Selecciona los canales que quieres hacer accesibles",
+
+  "select_channels_explanation":
+    "Selecciona los canales que quieres poner a la disposición de estas empresas.",
+
+  "select_companies": "Seleccionar empresas",
+
+  "select_companies_explanation": "Selecciona las empresas con las que quieres conectar.",
+
+  "select_companies_info":
+    "Las empresas que se suscriban podrán ver los planes asociados con este canal.",
+
+  "select_initial_channel": "Canal inicial",
+
+  "select_initial_channel_info":
+    "Selecciona el canal que quieres que se vea primero. Deja la configuración establecida en su valor predeterminado para ordenar de forma alfabética. ",
+
+  "select_plans": "Seleccionar planes",
+
+  "select_retailer": "Selecciona a tu minorista",
+
+  "select_role": "Selecciona tu rol",
+
+  "select_users": "Seleccionar usuarios",
+
+  "select_which_plan":
+    "Selecciona qué planes contendrán esta lección. Puedes elegir tantos planes como quieras.",
+
+  "select_your_company_below": "Seleccione a continuaci\u00f3n su empresa",
+
+  "select_your_interests": "Seleccione sus intereses",
+
+  "select_your_interests_info":
+    "Haz clic en las etiquetas a continuación que sean relevantes para tu empresa. Busca las categorías de productos que almacena tu compañía. Esto nos ayudará a recomendar el mejor contenido para ti.",
+
+  "select_your_store": "Selecciona tu tienda",
+
+  "select_your_team": "Selecciona tu equipo",
+
+  "select_your_team_desc": "Selecciona tu equipo para aprovechar al máximo Myagi",
+
+  "send": "Enviar",
+
+  "set_default": "Configurado como predeterminado",
+
+  "settings": "Configuraci\u00f3n",
+
+  "sharelink_name_taken":
+    "Este nombre está tomado. Por favor, elige otro nombre para tu enlace compartido.",
+
+  "sharelink_unavailable": "El enlace compartido que seguías ya no está disponible o no existe",
+
+  "sharelinks": "Enlaces a compartir",
+
+  "sharelinks_info":
+    "Los enlaces compartidos son enlaces personalizables que te permiten compartir el contenido de tu canal con personas ajenas a tu organización. Las personas que sigan tus enlaces tendrán acceso inmediato a los canales asociados una vez que se registren. Puedes activar y desactivar estos enlaces en cualquier momento.",
+
+  "sharing": "Compartir",
+
+  "show_more": "Mostrar más",
+
+  "showing_search_results_for": "Mostrando resultados para",
+
+  "sign_up": "Iniciar Sesi\u00f3n",
+
+  "sign_up_free_below": "Regístrate gratis a continuación",
+
+  "sign_up_to_access_it": "Regístrate a continuación para acceder a él",
+
+  "sign_up_to_access_them": "Regístrate más abajo para poder acceder",
+
+  "sign_up_to_join_your_companyname":
+    "Inicie sesión para unirse a sus colegas de Myagi en %(companyName)s",
+
+  "sign_up_to_start_viewing_training":
+    "Regístrese para comenzar a ver el entrenamiento de %(companyName)s",
+
+  "sort_by": "Ordenar por...",
+
+  "start": "Inicio",
+
+  "store_manager": "Director de la tienda",
+
+  "submit": "Enviar",
+
+  "subscribe_for": "Inscr\u00edbase a",
+
+  "subscription_paused_info":
+    "Tu suscripción se ha puesto en pausa y tu contenido de formación está temporalmente oculto para todos los usuarios. Haz clic aquí para programar una reunión con un director de cuentas.",
+
+  "success": "\u00c9xito",
+
+  "successful": "Satisfactorio",
+
+  "support": "Soporte",
+
+  "sure_you_want_to_archive":
+    "¿Seguro que quieres archivar este plan? Estará oculto para todos los usuarios.",
+
+  "tag_description":
+    "Haz clic en las etiquetas a continuación que sean interesantes para tu empresa. Busca las categorías de productos que almacena tu empresa, así como las regiones geográficas pertinentes. Esto nos ayudará a recomendar el mejor contenido para ti.",
+
+  "tags": "Etiquetas",
+
+  "tags_channels_info":
+    "Se sugerirá tu canal a todas las empresas que coincidan con las etiquetas que introduzcas aquí.",
+
+  "tags_settings_info":
+    "Las etiquetas se usan para identificar contenido que será relevante para tu empresa y para asegurarte de que el contenido que produces se recomienda a las personas adecuadas.",
+
+  "team": "Equipo",
+
+  "team_channels": "Canales de equipos",
+
+  "team_has_no_members": "Este equipo no tiene miembros. ¿Qué tal si invitas a unos cuantos? ",
+
+  "team_name": "Nombre del equipo",
+
+  "team_plans": "Planes de equipos",
+
+  "team_rank": "Rango de equipo",
+
+  "team_rank_is_determined_using_average":
+    "La posición del equipo se determina mediante la puntuación media de formación. La puntuación media de formación es el número total de preguntas respondidas correctamente por los miembros de un equipo dividido por el número de personas de ese equipo. Para mejorar la posición de tu equipo, pide a los miembros de tu equipo que intenten más lecciones y respondan a más preguntas correctamente.",
+
+  "teams": "Equipos",
+
+  "thank_you_for_notifying_us": "¡Gracias por notificárnoslo! ",
+
+  "thank_you_for_your_feedback": "Gracias por tus comentarios.",
+
+  "the_plans_for_this_badge_are_no_longer": "The plans for this badge are no longer available",
+
+  "the_sun_shine_a_bit_brighter":
+    "¡El sol brilla un poco más hoy! ¡Has ganado la felicitación! Insignias. Tómate un momento para reflexionar sobre lo genial que eres, luego revisa el botín de tu victoria aquí",
+
+  "there_are_no_archived_lessons": "No hay lecciones archivadas en este plan.",
+
+  "there_are_no_areas": "No hay ámbitos en esta compañía.",
+
+  "there_are_no_channel_connections": "No hay conexiones de canales disponibles.",
+
+  "there_are_no_groups": "No hay grupos en esta compañía.",
+
+  "there_are_no_lessons_with_plan": "No hay lecciones asociadas a este plan.",
+
+  "there_are_no_message_threads_available":
+    "No hay conversaciones de mensajes disponibles. Haga clic aqu\u00ed para crear una.",
+
+  "there_are_no_users_in_this_company": "No hay usuarios en esta empresa\n",
+
+  "there_isnt_anything_in_this_lesson":
+    "No hay nada en esta lección todavía. Haz clic en uno de los botones a continuación para añadir contenido.",
+
+  "these_plans_must_complete_earn_badge":
+    "Se deben completar estos planes para conseguir la insignia.",
+
+  "this_action_cannot_be_reversed": "Esta acción no se puede revocar.",
+
+  "this_attempt_will_be_marked_as": "Este intento se marcar\u00e1 como incompleto.",
+
+  "this_email_already_exists_perhaps_try":
+    "Esta direcci\u00f3n de correo electr\u00f3nico ya existe, quiz\u00e1s intente iniciar sesi\u00f3n?",
+
+  "this_is_where_you_can_create":
+    "Aqu\u00ed es donde puede crear o usar el contenido de la formaci\u00f3n",
+
+  "this_lesson_is_not_accessible": "No puedes acceder a esta lección",
+
+  "this_plan_contributes_to_earning_the":
+    "Este plan contribuye a ganar la insignia \"%(badgeName)s\".",
+
+  "this_plan_has_no_lessons": "Este plan no tiene lecciones",
+
+  "tick_this_box_to_receive_updates":
+    "Marque esta casilla para recibir actualizaciones de nuestro blog.",
+
+  "time": "Tiempo",
+
+  "to_access_other_content_sign_up_below":
+    "Para acceder a otro contenido, regístrate a continuación",
+
+  "to_create_one": "para crear una.",
+
+  "to_find_and_use_great_content": "para encontrar y utilizar contenido de la red Myagi.",
+
+  "to_find_and_use_other_great_content":
+    "para encontrar y utilizar distinto contenido de la red Myagi",
+
+  "today": "Hoy",
+
+  "todays_lessons": "Lecciones de hoy",
+
+  "total_number_of_users": "Número total de usuarios",
+
+  "training": "Entrenamiento",
+
+  "training_manager": "Director de formación",
+
+  "training_notifications": "Notificación de formación",
+
+  "training_notifications_info":
+    "Información sobre nuevos contenidos de formación, insignias y desafíos",
+
+  "transform_your_frontline_staff":
+    "Convierte tu personal de primera línea en el mejor personal de primera línea",
+
+  "try_again": "Intentarlo de nuevo",
+
+  "try_choosing_another_filter": "Trate de elegir otro filtro",
+
+  "try_this_lesson": "Probar esta lección",
+
+  "unable_to_archive_channel": "No se puede archivar el canal",
+
+  "unable_to_archive_channel_info":
+    "Los canales solo se pueden archivar una vez que se hayan eliminado todos los planes.",
+
+  "unpublished": "No publicado",
+
+  "unpublished_plans": "Planes no publicados",
+
+  "update": "Actualizar",
+
+  "update_details": "Detalles de Actualizaci\u00f3n",
+
+  "update_failed": "Error en la actualizaci\u00f3n",
+
+  "update_password": "Actualizar contrase\u00f1a",
+
+  "upgrade_to_pro": "Pásate a Pro — Gestiona tu equipo",
+
+  "upgrade_to_pro_info":
+    "Todos los usuarios tienen acceso de administrador en los planes gratuitos. Myagi Pro pone el control en tus manos al proporcionarte grupos, ámbitos y niveles de usuario para mantener organizada la formación de tu empresa.",
+
+  "upgrade_to_pro_organise": "Pásate a una cuenta Pro — Organiza tu empresa con la función Grupos",
+
+  "upgrade_to_pro_organise_area": "Pásate a Pro — Organiza tu empresa con la función Áreas",
+
+  "upload_your_video": "Sube tu vídeo",
+
+  "url_given_to_user": "La URL que se les dará a los usuarios cuando obtengan esta insignia.",
+
+  "user_access": "Acceso al usuario",
+
+  "user_permissions_updated": "Permisos del usuarios actualizados",
+
+  "user_rank_is_determined_using_training":
+    "La clasificaci\u00f3n del usuario se determina mediante la puntuaci\u00f3n del entrenamiento. La puntuaci\u00f3n del entrenamiento, es el n\u00famero de preguntas que ha contestado correctamente. Responda a nuevas preguntas correctamente o vuelva a contestar las preguntas viejas que tuvo mal para mejorar su puntuaci\u00f3n de entrenamiento.",
+
+  "users": "usuarios",
+
+  "users_can_view_discovery": "Los usuarios pueden ver el descubrimiento de canales",
+
+  "users_can_view_discovery_info":
+    "Si está activado, los usuarios pueden conectarse al contenido de formación externa a través de la página de descubrimiento de canales. Si está desactivado, solo pueden tomar el contenido de formación que esté disponible para ellos.",
+
+  "users_reached": "Usuarios alcanzados",
+
+  "users_will_be_enrolled":
+    "Users will be enrolled in these plans when they sign up. Only plans which have lessons and are published can be selected.",
+
+  "value_required": "Se necesita un valor para este campo.",
+
+  "video": "Vídeo",
+
+  "view": "Ver",
+
+  "view_analytics": "Ver análisis",
+
+  "view_archived": "Ver archivados",
+
+  "view_comments": "Ver comentarios",
+
+  "view_content": "Ver contenido",
+
+  "view_count_completed_items": "Ver %(count)s elementos completados",
+
+  "view_enrollments": "Ver las suscripciones",
+
+  "view_num_more_comments": "Ver %(num)s comentarios más",
+
+  "view_one_completed_item": "Ver 1 elemento completado",
+
+  "view_one_more_comment": "Ver 1 comentario más",
+
+  "views": "Vistas",
+
+  "waiting_for_company": "Esperando a que %(company)s acepte",
+
+  "waiting_to_be_accepted_by_company": "Esperando ser aceptado por % (empresas)s",
+
+  "want_to_restore_from_archive": "¿Te gustaría restaurar este plan desde el archivo?",
+
+  "want_to_restore_lesson_from_archive": "¿Te gustaría restaurar esta lección del archivo?",
+
+  "warning_badge_codes":
+    "Advertencia: el(los) siguiente(s) código(s) que has introducido ya se ha(n) compartido con un usuario",
+
+  "watch_video_to_continue": "Vea el Video para Continuar",
+
+  "we_created_a_list_of_companies":
+    "Hemos seleccionado estos canales para ti en función de las marcas que enumeras en el sitio web de tu empresa. Conéctate con ellos para ofrecer un aprendizaje más valioso para tu empresa.",
+
+  "we_have_copied_this_reward_to": "Hemos copiado esta recompensa en tu portapapeles.",
+
+  "we_have_sent_you_an_email": "Te hemos enviado un correo electr\u00f3nico",
+
+  "we_let_company_know_channel_requested":
+    "Le hemos hecho saber a esta compañía que quieres conectarte. Te avisaremos cuando respondan.",
+
+  "we_let_company_name_know_channel_requested":
+    "Hemos informado a %(companyName)s que quieres conectarte. Te informaremos cuando responda.",
+
+  "web_page": "Página web",
+
+  "web_snippet": "Fragmento web",
+
+  "weekly": "Semanal",
+
+  "what_are_connections": "¿Qué son las conexiones?",
+
+  "what_are_sharelinks": "¿Dónde están los enlaces compartidos?",
+
+  "what_is_myagi": "\u00bfQu\u00e9 es Myagi?",
+
+  "what_youll_learn": "Lo que aprenderás",
+
+  "with_myagi_you_can": "Con Myagi puedes: ",
+
+  "wooo_you_have_been_awarded_the": "Bravo! Se le ha concedido el",
+
+  "would_you_like_to_see_more": "Le gustar\u00eda ver m\u00e1s contenido de este producto/tema?",
+
+  "yes": "S\u00ed",
+
+  "yes_i_want_to_join": "Sí, quiero unirme",
+
+  "you_are_already_connected":
+    "Ya estás conectado a este canal. Puedes ver el contenido disponible haciendo clic en el botón Contenido en la barra de navegación superior y seleccionando Canales y luego Canales externos.",
+
+  "you_are_not_in_a_team": "No est\u00e1s en un equipo.",
+
+  "you_can_now_access_content":
+    "Ahora puedes acceder a este contenido desde la pestaña Planes en Planes externos",
+
+  "you_can_upload_your_own_after": "Puede cargar el suyo, despu\u00e9s de iniciar sesi\u00f3n",
+
+  "you_connected_to_all_curated": "Te has conectado a todos los canales seleccionados.",
+
+  "you_did_not_select_a_valid":
+    "No has seleccionado una imagen v\u00e1lida. Por favor, seleccione otro archivo.",
+
+  "you_do_not_have_any_groups": "No tienes ningún grupo",
+
+  "you_do_not_have_any_teams": "No tienes ningún equipo",
+
+  "you_have_been_invited":
+    "You have been invited by your company to learn online with Myagi. Follow the link below to learn how to delight your customers and stand out in your job.",
+
+  "you_have_not_earned_any_badges": "No has ganado ning\u00fana insignia",
+
+  "you_have_requested_access":
+    "Has solicitado acceso a este canal. Esperando aprobación de %(companyName)s.",
+
+  "you_must_watch_the_entire_video":
+    "Debes ver todo el v\u00eddeo desde el principio hasta el final (sin saltar hacia adelante) antes de que puedas avanzar. No vea el v\u00eddeo fuera de esta p\u00e1gina o tendr\u00e1 que volverlo a ver aqu\u00ed.",
+
+  "you_uploaded_a_new_profile_image":
+    "Has subido una nueva imagen de perfil, pero los cambios no se han guardado. Por favor, haga clic en el bot\u00f3n enviar que aparece a continuaci\u00f3n.",
+
+  "you_will_be_logged_out":
+    "Si seleccionas esta opción, la sesión se cerrará automáticamente después de 30 minutos de inactividad.",
+
+  "you_will_no_longer_have_access_to_this_content": "Ya no tendrás acceso a este contenido",
+
+  "you_will_not_reverse": "No podrás anular esta eliminación.",
+
+  "your_badges": "Sus Insignias",
+
+  "your_channels": "Canales de tu compañía",
+
+  "your_company_name": "Nombre de tu compañía",
+
+  "your_company_name_info":
+    "Puedes actualizar el nombre de tu empresa aquí. Cualquier cambio realizado será visible para todos los usuarios.",
+
+  "your_company_website_url": "URL del sitio web de tu compañía",
+
+  "your_companys_details": "Los detalles de su empresa",
+
+  "your_details": "Tus datos",
+
+  "your_groups": "Tus grupos",
+
+  "your_myagi_url": "Tu URL de Myagi es",
+
+  "your_password_has_been_updated": "¡Tu contraseña se ha actualizado!",
+
+  "your_personalised_sharelink": "Tu enlace compartido personalizado",
+
+  "your_plans": "Tus planes",
+
+  "your_progress": "Tu progreso",
+
+  "your_score": "Tu puntuaci\u00f3n",
+
+  "your_search_did_not_match": "Tu búsqueda no coincide con ningún resultado",
+
+  "your_search_did_not_match_any":
+    "Tu búsqueda no coincide con ningún resultado. Trata de elegir otro filtro.",
+
+  "your_teams": "Tus equipos"
+}

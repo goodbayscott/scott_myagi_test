@@ -1,0 +1,12 @@
+export SCRATCH_DIR=/home/myagi/scratch
+export SRC_DIR=/home/myagi/src
+export VENV_DIR=/home/myagi/venv
+export DJANGO_DIR=$SRC_DIR/myagi
+
+source $VENV_DIR/bin/activate
+source /home/myagi/django_environment_variables
+
+alias venv="source $VENV_DIR/bin/activate"
+alias myagi-settings="source /home/myagi/django_environment_variables"
+
+source $VENV_DIR/bin/activate && source /home/myagi/django_environment_variables

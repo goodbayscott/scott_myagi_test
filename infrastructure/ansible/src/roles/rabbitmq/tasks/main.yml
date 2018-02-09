@@ -1,0 +1,45 @@
+---
+
+- name: ensure python-software-properties is installed
+  apt: pkg=python-software-properties state=installed
+
+- name: add rabbitmq official apt repository
+  apt_repository: repo='deb http://www.rabbitmq.com/debian/ testing main' state=present
+
+- name: install rabbitmq
+  apt: pkg=rabbitmq-server state=installed force=yes
+
+- name: Set erlang cookie
+  template: src=../files/erlang.cookie dest=/var/lib/rabbitmq/.erlang.cookie owner=rabbitmq group=rabbitmq mode=0400
+  notify:
+    - restart rabbitmq
+
+- name: Kill rabbitmq
+  sudo: yes
+  shell: pkill -9 -u `id -u rabbitmq`
+  ignore_errors: yes
+
+- name: start rabbitmq
+  service: state=started name=rabbitmq-server enabled=yes
+
+- name: ensure vhost myagi is present
+  rabbitmq_vhost: node=rabbit@{{ ec2_tag_Name }} name=myagi state=present
+  notify:
+    - restart rabbitmq
+
+- name: add users
+  rabbitmq_user: node=rabbit@{{ ec2_tag_Name }} user={{item}} password=rabbitmq-is-clown-town tags=administrator,{{item}} vhost=myagi configure_priv=.* write_priv=.* read_priv=.* state=present
+  with_items:
+    - myagi
+  notify:
+    - restart rabbitmq
+
+- name: remove default guest user
+  rabbitmq_user: node=rabbit@{{ ec2_tag_Name }} user=guest state=absent
+  notify:
+    - restart rabbitmq
+
+- name: ensure permissions are set
+  shell: rabbitmqctl set_permissions -n rabbit@{{ ec2_tag_Name }} -p myagi myagi ".*" ".*" ".*"
+  notify:
+    - restart rabbitmq

@@ -1,0 +1,27 @@
+<div class="nav-container">
+    <nav class="fixed-navbar bar-1 hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-2 hidden-xs">
+            <div class="bar__module">
+              <a href="{{relURL "/"}}"> <img id="nav-logo" class="logo logo-dark" alt="logo" src="{{relURL "img/myagi-logo.png"}}"> </a>
+            </div>
+          </div>
+          <div class="col-md-10 col-sm-12 text-right text-left-xs text-left-sm">
+            <div class="bar__module">
+              <!-- <a href="{{relURL "pricing"}}" class="basic-nav-item"><span>Pricing</span></a>
+              <a href="{{relURL "about"}}" class="basic-nav-item"><span>About</span></a> -->
+              <a class="btn btn--sm type--uppercase" href="https://myagi.com/accounts/login/?locale={{.Site.Language.Lang}}">
+                <span class="btn__text">{{i18n "signIn"}}</span>
+              </a>
+              <a class="btn btn--sm btn--primary type--uppercase" href="https://myagi.com/signup/user/?locale={{.Site.Language.Lang}}">
+                <span class="btn__text">
+                  {{i18n "signUp"}}
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+</div>

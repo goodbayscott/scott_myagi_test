@@ -1,0 +1,3 @@
+{% for key, value in django_environment_vars.iteritems() %}
+export {{ key|safe }}="{{ value|safe }}"
+{% endfor %}

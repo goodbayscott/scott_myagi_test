@@ -1,0 +1,8 @@
+{{$translatedPath := (print .basePath .currentLang ".png" ) }}
+{{$defaultPath := (print .basePath "en.png")}}
+<img alt="Image" src="
+  {{if fileExists (print "static/" $translatedPath)}}
+    {{$translatedPath | relURL}}
+  {{else}}
+    {{$defaultPath | relURL }}
+  {{end}}" />

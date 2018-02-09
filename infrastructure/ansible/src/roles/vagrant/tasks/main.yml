@@ -1,0 +1,17 @@
+
+- name: setup vagrant user
+  user: name=vagrant shell=/bin/bash groups=myagiadmins,myagiapps append=yes
+
+- name: add java repo
+  shell: add-apt-repository ppa:webupd8team/java -y
+
+- name: accept java license
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections && echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+
+- name: install headless chromium and loggly dependencies
+  apt: name={{ item }} update_cache=yes
+  with_items:
+    - chromium-browser
+    - xvfb
+    # Required for Loggly
+    - oracle-java8-installer

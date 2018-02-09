@@ -1,0 +1,10 @@
+---
+
+- name: setup for a bastion server
+  hosts: tag_myagi_instance_type_bastion
+  gather_facts: no
+  sudo: yes
+
+  roles:
+    - common
+    - bastion

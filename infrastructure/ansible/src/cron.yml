@@ -1,0 +1,11 @@
+---
+
+- name: setup for cron machine
+  hosts: tag_myagi_instance_type_cron
+  gather_facts: no
+  sudo: yes
+
+  roles:
+    - common
+    - myagi
+    - backup

@@ -1,0 +1,34 @@
+---
+
+- name: install s3cmd
+  apt: name={{ item }} update_cache=no
+  with_items:
+    - s3cmd
+
+- name: add backup script
+  copy: src=db_backup.sh dest=/usr/local/bin/db_backup.sh owner=root group=root mode=0755
+
+- name: add backup deletion script
+  copy: src=delete_old_backups.sh dest=/usr/local/bin/delete_old_backups.sh owner=root group=root mode=0755
+
+- name: add s3cfg file
+  copy: src=s3cfg dest=/etc/s3cfg owner=root group=root mode=0644
+
+- name: add backup cron file
+  copy: src=db_backup_cron dest=/etc/cron.d/db_backup_cron owner=root group=root mode=0644
+
+# Assumes that a large, extra volume has been created for this machine.
+# Will create a filesystem for that volume if none exists.
+- filesystem: fstype=ext4 dev=/dev/xvdf
+
+# Attaches the volume
+- shell: mount /dev/xvdf /data
+  ignore_errors: yes
+
+- name: ensure data dirs
+  file: path={{ item }} owner=myagi group=myagiapps mode=0774 state=directory
+  with_items:
+    - "/data"
+    - "/data/backups"
+    - "/data/backups/daily"
+    - "/data/backups/regularly"

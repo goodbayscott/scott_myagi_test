@@ -1,0 +1,42 @@
+---
+
+myagigroups:
+    - myagiadmins
+    - myagiapps
+myagiusers:
+    jon:
+        uid: 3000
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA2efXYkWXWBPZh0IB1Wnmwse+lz4Zt+4M+d4cxDdW6TF9GoBywgnKp88bRgrcs3AhzpitsBoPc+IWLzJu414GyufhzSh+uce2o0rm6ROEjN+3BM1Y5rS5oNkNSNkEzjq2kglijrDa0doFoFgft22S9ZGtHtMDX4MG58pjRB01ldwuw4/xNG0ETYLVPihqOcvSGB1wB/MM4FYdN8QOUEJz9jgAOKPmgGt/1DLw5hOexJVco3Okq5DosS2dtsgrT8njrYclUY99uZMSKb4SrrLnLSvYMFiUsuLSwY+PSQpcq+SzBBglNbvFoTWypX0Qe3SWHY3+wu8PfugErDbv6NZ4zQ== everyblock-jon"
+        absent: true
+    td_mcleod:
+        uid: 3001
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtP/KvhCMz/lO+Njl8aWp9fY5JVZpUmycHm18m6rmwwauC247SMJjuG5NWtTsKU9hc6NOOM6srXaiviC+gkp8GPAh8DCixNvYVbAJxV8ogMrd4jJKiXPxXYVnsK2fmcGaqlATAD2Gex+LZGzp6LYsz1PZg/ZbZEaQZT2TaN+kktnwSv0UXgAi+KyWaG4F/dRjAKacz6UHaiyQ9eT6w/yDAHPGayKHjg5QV6mIRtTa3vtPQhbWwQVltMUYyzcMe4Y4eamjA7stflTRq3nImrPS97WJ9ySQThAxO/f4QJA4Yo9UqGRrR82PrxBCuz4evLm5P6pxZ3F69z2NlamarFfnYQ=="
+        absent: false
+    evansoderberg:
+        uid: 3002
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAiF3MZjm2FSG0inPFetYpaRgOPg8SEyTLStLSG5EbsnBEe5xanJ9Ep+WmD90ABtN2SK7n04+5Q1NzuvZsQqCH7Pe0Pkpvyx23JL4dC/yxsyNKpq/zkuCRNsrDvv6bLwRUjCO8PiQcT9JexPOkIYgRzszq+m4kvNVyWmmvvTQlbfxioAS8mthiEndSfw71lnpWNvvBWgIpZGO035vCLT/cK1vdWXhICSsnB/fNzuMs9ocp6Z4XyIS/DkyZ69TRASwqMaAzH2EXBxMf7Fq5Fl4b9Tm4iZygDz/oIquaXYVpGKvdNkB+HKwZOTSv4xahTa3JPheeDLpYjh5MJ6mu18It"
+        absent: false
+    alex:
+        uid: 3003
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCu7sAxkzWNNv9V/n+TXRTUwQjJnj7SxoWMQUmpLupriVLduSZnVoKm3mTOI6TtdyieM77/7giLgQvkem0X9kiGoyuj4gM/ydNaHNfN3ENf4pGDQANLzL6JMiHvvKWEs/wAJZYbtAu3U8iJCsUxLYHRBHT7GDvwhur/FynG2YwyvDju0l70l6I9ox+A3jp2RfIA8tweaf5l8Q91H79G979qp39diqt5bUjSXdXja7BoH25/tNYWzk2ExDwhpObYuSX5ZZ6eWTVl8YfDHtC40d0/Tj0fjc4m3qJvNoreozNwYgp7zg5P9vBoq5zlbLMx05yCVYVqk5wn5WlAMYFdiqRh"
+        absent: false
+    dennyvuong:
+        uid: 3004
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ34L0qWjYBI78Ws9MMUC/AwoOMGMllTIc7fEtN9o/WE5f+73sgF9Y/iVogAIk5DFX7fel3w5mtd3I21DnThlWa+mdY6WN1IeDnjyLwuA8QHlF5TtNIRq+YG9W4vAJZ4U8bdRy0nN8RpZk9wNtssyX90oAmcqlHjR5QQmKot0Y2oHeFL7o0huDqDZ343y3FKphVZC7tLtBAnrfjd0iWxp2vRGbBWK4DZF/K/pJ3H3ITFMewCjgZCLvm3OCIKgljXar6MgufThWZ5zr3C2isYFZGsbXe9yKLSUM97IO+M2wsI6tX4jmRHwxjDbhYwqJmko7H75sHWvpzpYS5+CdDwxr"
+        absent: false
+    myagi-contractor:
+        uid: 3006
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvSfr22SBb2/BwCXYTKwGbaJ+N1ajjMh3YD2CIWNMn+KBJHsxcQ95QiM0YqzXyyg1coX3vIo7kQxgXzu5udNpwRCfbTQjToRYeEmJEoBvC/V+3BVexYzH9AQd50AUvFHgp0qb4OmKYdmPtcCsEl4fJnxDXZ3c3I0fQq5IQAwl5z+BVUk9ZRlFw8SQTAhr3QUET2edo98PX6x6wUX0kumh8BAfatM5n9E98Fx3E8VMmoQzd4cxaOjzX2QM95T4Vm5ERMulOM3Eow0hVS7KfSQ2PF+JH/hSV957csdb7ApygsXI25L3a3/gBTgZ7XXf5okMzYRLPmZp0Ch+fsyD+cr+3 myagi-contractor@myagi-contractor"
+        absent: false
+    dean:
+        uid: 3007
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJXx6oWmhO1XCQtxa9r+pXYnCRmQ1gutjoDJ0uCMC/pwjoZmwWDeVniaRUNw5wospIHmvp22HxDNPMil38e6qKZ+SJMGM0qjcr/cMhjdTyMxGayG2vcmCMYU95v6OcBrgtdYeJ4R9mVQ8Twa8v3iM/OLcnbrGPF0lf39XqBOK284C66ZVWYsVJ48AfgzBR6R+vS23SCo+cPU7+008DCtKUp7FBhSSah98xIdJltL1kHLEQmdc3gcd6WRWlMxXdcIcYuRMKoI6pfhCYIKrGAmtBr3DU+9eEiDKeQAemgvCgMlUXYRAgwwFI0Ef304YN6Jpx1BziE3juZ+O2JkazRwNWIdRYzyLMUa8ZGJmlrrfFzvfpsZDIJ4w+Oq/bRXYQWT1jWAyM6ebrcG3WY69/sfRsy96UbFr/uYi44zW9Ww95JJmRG2XIu6iOiyxb5lxYnzprKWvn594xgNIozHqbD9EjhoeqAU8g1xADlTWOKlhDBf4no7Mu3n7x2DfQZWkikrI2iG+Ss+zS0Pz112ImypvNEtWHe5VgaFSaMZDPiq9salV4dxzCtO0VEo8dZgVDa7vCTmMa8zbBcBZ0U3VFeOgFK0uzU1OUWUS55g13GmwKCyuLh5zWNcYA4dcRQ32YMtSPv3Z2g0elKvgPhnb10yMuZIY9d6izTC4ODNjHPlgXzQ== dean@myagi.com"
+        absent: false
+    annsiapno:
+        uid: 3008
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhHHLZNkLSbYaWU0havrgjl2F87iVVKVGTb/YKP2HCTrcvoZGbJfN+yiQ88keg9ODpjrZEtaJILWpFtl3d4LjOkJPNhIKw39NkcHZAjtr9pmrisDG1wqULA1swCSsnCN+pg7fs3flu+fGixaP2ZNJ5qgIHBCM8Dr4rIl9Au4C/KBMQ83+dW00FzKWBzHEBp3a/ADEsIE1v8Np4b39okn49lwqLHPc7umwicaPmtxmZUybhIrePxg1TjiUMmqwKz3CXREOtWpIW/mqdD1U75Po0N9OipPZOMx2hd7I0Nh0fkOawShn0ajQoDL6HoR9bu5UNmgskVf8DZVdyN+TTMsC9 annsiapno@Anns-MacBook-Pro.local"
+        absent: false
+    louis:
+        uid: 3009
+        pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtp+BpbHj/9NqwHL1dFXfZ8dulBW08PutfQDOtedg/gXRwO4HqS40Zu0R8zg6eZjUeYR5wSKthP88OJ3O53sUpWmIcewcs+3Vpmk4qQ+jRuxNtvWI+7We54s4XvqgZrHYOD9JN7dTtjHz+jKEaJVTfiBTJ5IKlJVbojRev0gRAKIYPAyYaR+PlhJnNpyTtmRlpMRrBvb774PFwu7g21RuFqtjv+IY/biSAVo9I1aUZysZSO8I8aFKWGZHgYBcWqkKhUDxuJTWI9ToM2W4QFL/2aBD1lamWjxLzK9QgqS7rnwpRHM1WRXzQ497Vt2bI2xKw1YJ2S4erHSJJg2AAGr3f myagi@RobertOppenheimer"
+        absent: true

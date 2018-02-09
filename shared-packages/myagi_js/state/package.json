@@ -1,0 +1,8 @@
+{
+  "name": "state",
+  "description": "Myagi state module. Is shared between frontend and native apps.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {}
+}

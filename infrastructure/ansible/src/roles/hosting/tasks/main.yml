@@ -1,0 +1,254 @@
+---
+
+- name: setup myagi user
+  user: name=myagi shell=/bin/bash groups=myagiapps append=yes uid=5000
+
+- name: ensure directories
+  file: path={{ item }} owner=myagi group=myagiapps mode=2775 state=directory
+  with_items:
+    - "/home/myagi/scratch"
+    - "/home/myagi/nginx"
+    - "/home/myagi/static"
+    - "/home/myagi/.aws"
+    - "/home/myagi/python/ansible_settings"
+    - "/var/log/myagi"
+    - "/home/myagi"
+
+
+- name: ensure src directory
+  file: path={{ item }} owner=myagi group=myagiapps mode=2775 state=directory
+  with_items:
+    - "/home/myagi/src"
+  # This dir causes issues with vagrant
+  when: ec2_tag_myagi_stack != 'development'
+
+
+- name: install nginx
+  apt: name={{ item }} update_cache=yes
+  with_items:
+    - nginx-full
+
+
+- name: nginx setup default site
+  template: src=nginx/default dest=/etc/nginx/sites-available/default owner=root group=root mode=0644
+
+- name: nginx setup myagi site
+  template: src=nginx/myagi dest=/etc/nginx/sites-available/myagi owner=root group=root mode=0644
+
+- file: src={{ item.src }} dest={{ item.dest }} state=link
+  with_items:
+    - { src: '/etc/nginx/sites-available/myagi', dest: '/etc/nginx/sites-enabled/myagi' }
+
+- name: ensure nginx is running/reloaded
+  service: name=nginx state=reloaded enabled=yes
+
+- name: trim nginx logging down to 10 days
+  template: src=logrotate/nginx dest=/etc/logrotate.d/nginx owner=root group=root mode=0644
+
+
+- name: Remove old version of supervisor
+  apt:
+    name: supervisor
+    state: absent
+
+- name: ensure correct version of supervisor is being used
+  shell: pip install supervisor==3.3.1
+  become: true
+  become_method: sudo
+
+
+- name: add supervisord init script
+  template: src=supervisord/supervisord-init.sh dest=/etc/init.d/supervisor owner=root group=root mode=0755
+  register: supervisord_init
+
+- name: check that the supervisord.conf exists
+  stat:
+    path: /etc/supervisor/supervisord.conf
+  register: stat_result
+
+# A later task makes sure that supervisord is started, however
+# this ensures that it gets restarted if the underlying service script changes
+# (but only if supervisord.conf has already been set).
+- name: restart supervisord
+  service: name=supervisor state=restarted
+  when: supervisord_init.changed and stat_result.stat.exists == True
+
+
+- name: setup awscli for pulling distributions on s3
+  shell: pip install awscli
+
+- name: awscli config
+  template: src=aws/config dest=/home/myagi/.aws/config
+  become: true
+  become_user: myagi
+
+- name: awscli credentials
+  template: src=aws/credentials dest=/home/myagi/.aws/credentials
+  become: true
+  become_user: myagi
+
+
+- name: make ansible settings a module
+  file: dest=/home/myagi/python/ansible_settings/__init__.py state=touch
+  become: true
+  become_user: myagi
+
+- name: django settings
+  template: src=django/settings.py dest=/home/myagi/python/ansible_settings/settings.py
+  become: true
+  become_user: myagi
+
+- name: django enviroment variables
+  template: src=django_environment_variables dest=/home/myagi/django_environment_variables
+  become: true
+  become_user: myagi
+
+- name: setup bash_profile for myagi user
+  template: src=bash_profile dest=/home/myagi/.bash_profile
+  become: true
+  become_user: myagi
+
+- name: add boto endpoints file
+  template: src=boto-endpoints.json dest=/home/myagi/boto-endpoints.js
+  become: true
+  become_user: myagi
+
+- stat: path=/home/myagi/venv/bin/activate
+  register: venv_activate_file
+
+- name: setup python virtualenv
+  shell: cd ~ && virtualenv venv
+  become: true
+  become_user: myagi
+  when: venv_activate_file.stat.exists == False
+
+- name: set venv permissions
+  shell: chmod -R 2775 /home/myagi/venv
+  become: true
+  become_method: sudo
+
+- name: upgrade pip
+  shell: /home/myagi/venv/bin/pip install setuptools pip --upgrade
+  become: true
+  become_user: myagi
+
+
+- name: add deployment file to myagi home dir
+  template: src=deploy.sh dest=/home/myagi/deploy.sh mode=0755
+  become: true
+  become_user: myagi
+
+
+- name: django pipeline requirements
+  shell: npm install -g {{ item }}
+  with_items:
+    - uglify-js
+    - cssmin
+
+
+- name: copy updated certs
+  copy: src=../files/certs/ dest=/usr/local/share/ca-certificates owner=root group=root mode=0644
+
+- name: register updated certs
+  shell: update-ca-certificates
+
+
+- name: create supervisor directory
+  file: path=/etc/supervisor state=directory
+
+- name: create supervisor conf directory
+  file: path=/etc/supervisor/conf.d state=directory
+
+- name: create supervisor log directory
+  file: path=/var/log/supervisor state=directory
+
+
+- name: add supervisord conf
+  template: src=supervisord/supervisord.conf dest=/etc/supervisor/supervisord.conf owner=root group=root mode=0644
+
+- name: add gunicorn to supervisor
+  template: src=supervisord/web_workers.conf dest=/etc/supervisor/conf.d/web_workers.conf owner=root group=root mode=0644
+  when: (ec2_tag_myagi_instance_type == 'web') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+- name: add celery beat to supervisor
+  template: src=supervisord/celery_beat.conf dest=/etc/supervisor/conf.d/celery_beat.conf owner=root group=root mode=0644
+  when: (ec2_tag_myagi_instance_type == 'worker') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+- name: add celery workers to supervisor
+  template: src=supervisord/celery_workers.conf dest=/etc/supervisor/conf.d/celery_worker_{{item}}.conf owner=root group=root mode=0644
+  with_items:
+    - 1
+    # - 2
+    # - 3
+  when: (ec2_tag_myagi_instance_type == 'worker') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+- name: Remove old worker configuration
+  file:
+    state: absent
+    path: /etc/supervisor/conf.d/celery_workers.conf
+
+- name: Remove old worker configurations
+  file:
+    state: absent
+    path: /etc/supervisor/conf.d/celery_worker_{{item}}.conf
+  with_items:
+    - 2
+    - 3
+
+- name: add celery backend workers to supervisor
+  template: src=supervisord/celery_backend_workers.conf dest=/etc/supervisor/conf.d/celery_backend_worker_{{item}}.conf owner=root group=root mode=0644
+  with_items:
+    - 1
+    # - 2
+  when: (ec2_tag_myagi_instance_type == 'worker') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+- name: Remove old backend worker configuration
+  file:
+    state: absent
+    path: /etc/supervisor/conf.d/celery_backend_workers.conf
+
+
+- name: Remove old backend worker configurations
+  file:
+    state: absent
+    path: /etc/supervisor/conf.d/celery_backend_worker_{{item}}.conf
+  with_items:
+    - 2
+
+- name: add kick celery script
+  template: src=kick_celery.sh dest=/usr/bin/kick_celery.sh owner=myagi group=root mode=0755
+  when: (ec2_tag_myagi_instance_type == 'worker') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+- name: add kick celery process
+  template: src=supervisord/kick_celery.conf dest=/etc/supervisor/conf.d/kick_celery.conf owner=root group=root mode=0644
+  when: (ec2_tag_myagi_instance_type == 'worker') or (ec2_tag_myagi_instance_type == 'web_and_worker')
+
+
+- name: ensure supervisor is running/reloaded
+  service: name=supervisor state=started
+
+- name: reread supervisor configuration
+  shell: supervisorctl reread
+
+- name: restart altered services
+  shell: supervisorctl update
+
+- name: ensure supervisor socket has correct permissions
+  file: path=/var/run/supervisor.sock mode=0770 group=myagiapps
+
+
+# Have disabled loggly setup - it is so slow, and we aren't using
+# it significantly right now.
+
+# - name: download loggly script
+#   register: loggly_script
+#   get_url:
+#     url: https://www.loggly.com/install/configure-file-monitoring.sh
+#     dest: /tmp/configure-file-monitoring.sh
+#   # Do not install Loggly on dev servers
+#   when: ec2_tag_myagi_instance_type != 'web_and_worker'
+#
+#
+# - name: setup loggly for /var/log/myagi
+#   shell: "yes 'yes' | sudo bash /tmp/configure-file-monitoring.sh -a myagi -t 7ac4515b-8a5e-4ecc-a67d-7351139a187d -u myagi -p gciYmr2qJikv -f /var/log/myagi -l {{ec2_tag_myagi_stack}}-$(wget -qO- http://instance-data/latest/meta-data/instance-id)-var-log-myagi"
+#   when: loggly_script.changed and (ec2_tag_myagi_instance_type != 'web_and_worker')

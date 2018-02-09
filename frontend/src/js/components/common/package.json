@@ -1,0 +1,14 @@
+{
+  "name": "common-components",
+  "description": "Myagi common components. Is shared between frontend and native apps.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "peerdDependencies": {
+    "classnames": "1.2.0",
+    "fbjs": "0.4.0",
+    "hyphenate-style-name": "1.0.0",
+    "react": "0.14.7",
+    "react-mixin": "3.0.3"
+  }
+}

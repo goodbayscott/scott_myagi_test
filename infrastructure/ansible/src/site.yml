@@ -1,0 +1,5 @@
+- include: app.yml
+- include: bastion.yml
+- include: builder.yml
+- include: cron.yml
+- include: ftp.yml

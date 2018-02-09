@@ -1,0 +1,19 @@
+{
+  "sqs": {
+        "__comment__": "The version of Boto used by Celery 4.0 has a bug in which the SQS endpoints are incorrect. This file is used to correct that. See https://github.com/boto/boto/pull/3633.",
+        "ap-northeast-1": "sqs.ap-northeast-1.amazonaws.com",
+        "ap-northeast-2": "sqs.ap-northeast-2.amazonaws.com",
+        "ap-south-1": "sqs.ap-south-1.amazonaws.com",
+        "ap-southeast-1": "sqs.ap-southeast-1.amazonaws.com",
+        "ap-southeast-2": "sqs.ap-southeast-2.amazonaws.com",
+        "cn-north-1": "sqs.cn-north-1.amazonaws.com.cn",
+        "eu-central-1": "sqs.eu-central-1.amazonaws.com",
+        "eu-west-1": "sqs.eu-west-1.amazonaws.com",
+        "sa-east-1": "sqs.sa-east-1.amazonaws.com",
+        "us-east-1": "sqs.us-east-1.amazonaws.com",
+        "us-east-2": "sqs.us-east-2.amazonaws.com",
+        "us-gov-west-1": "sqs.us-gov-west-1.amazonaws.com",
+        "us-west-1": "sqs.us-west-1.amazonaws.com",
+        "us-west-2": "sqs.us-west-2.amazonaws.com"
+    }
+}

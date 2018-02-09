@@ -1,0 +1,144 @@
+.wistia_upload_drop_zone {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px dashed #b3b3b3;
+    position: relative;
+    text-align: center
+}
+.wistia_upload_drop_zone.wistia_preview_visible {
+    border-color: transparent
+}
+.wistia_upload_drop_zone.wistia_preview_visible>* {
+    opacity: 0
+}
+.wistia_upload_drop_zone.wistia_preview_visible .wistia_upload_preview.wistia_preview_visible {
+    opacity: 1
+}
+.wistia_upload_drop_zone_hover {
+    background: rgba(0, 0, 0, 0.06);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.wistia_upload_drop_zone.wistia_dragover .wistia_upload_drop_zone_hover {
+    display: block
+}
+.wistia_upload_preview {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.wistia_upload_graphic {
+    height: 65px;
+    margin-top: 12%;
+    width: 65px
+}
+.wistia_upload_text {
+    color: #777;
+    margin: 1em 0;
+    font-family: WistiaPlayerOverpass, Helvetica, Arial;
+    font-size: 18px
+}
+.wistia_upload_button {
+    background-color: #f7f6f4;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    font-family: WistiaPlayerOverpass, Helvetica, Arial;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 120px;
+    zoom: 1
+}
+.wistia_upload_button:hover {
+    background-color: #f1efee;
+    border-color: #aaa;
+    color: #777
+}
+.wistia_upload_button:active {
+    background-color: #eae8e2;
+    border-color: #999;
+    color: #666
+}
+.wistia_upload_button:focus {
+    border: double;
+    outline: 0
+}
+.wistia_upload_button_text {
+    padding: 0;
+    position: relative;
+    top: 0;
+    white-space: nowrap
+}
+.wistia_upload_button.wistia_uploading {
+    background-color: rgba(239, 83, 41, 1);
+    border: 0;
+    color: #fff;
+    padding: 1px
+}
+.wistia_uploading .wistia_upload_button_text,
+.wistia_upload_cancelled .wistia_upload_button_text {
+    padding: 0
+}
+.wistia_upload_button.wistia_upload_success {
+    background-color: #88C100;
+    border-color: #88C100;
+    color: #fff
+}
+.wistia_upload_button.wistia_upload_failure,
+.wistia_upload_button.wistia_upload_cancelled {
+    background-color: #D95C5C;
+    border-color: #D95C5C;
+    color: #fff
+}
+.wistia_upload_button.wistia_upload_failure:hover {
+    background-color: #ff9179;
+    border-color: #ff9179
+}
+.wistia_upload_button.wistia_upload_failure:active {
+    background-color: #ff6f51;
+    border-color: #ff6f51
+}
+.wistia_upload_failure .wistia_upload_button_text {
+    padding: 0
+}
+.wistia_upload_bar {
+    background-color: rgba(220,60,20,1);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 200ms;
+    width: 0
+}
+.wistia_upload_theme_dark_background {
+    border-color: #fff
+}
+.wistia_upload_theme_dark_background .wistia_upload_text {
+    color: #fff
+}
+.wistia_upload_theme_dark_background .wistia_upload_button.wistia_upload_video {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff
+}
+.wistia_upload_theme_dark_background .wistia_upload_button.wistia_upload_video:hover {
+    background-color: rgba(255, 255, 255, 0.1)
+}

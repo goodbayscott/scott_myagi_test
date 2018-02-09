@@ -1,0 +1,5 @@
+.aws-credentials
+*.pyc
+.keys/
+*.DS_Store
+.git-tmp/
